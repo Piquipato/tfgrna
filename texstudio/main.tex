@@ -1,0 +1,347 @@
+\documentclass[a4paper,11pt,titlepage]{article}
+
+
+% -- PAQUETES -- %
+\usepackage[top=1.5in, bottom=1.5in, left=1in, right=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,latexsym,bm,mathtools,amsthm}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{indentfirst}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{xfrac}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+\usepackage[spanish,es-tabla]{babel}
+\spanishdecimal{.}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{comment}
+\usepackage[backend=bibtex,style=ieee,sorting=nty]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{caption}
+\usepackage{etoolbox}
+\usepackage{adjustbox}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{microtype}
+\usepackage{bbm}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage{ragged2e}
+
+
+% -- CUSTOM COMMANDS -- %
+\newcommand{\er}[2][ecuación]{\hyperref[#2]{#1~\eqref{#2}}}
+\newcommand{\nr}[2][sección]{\hyperref[#2]{#1~\ref{#2}}}
+\newcommand{\n}[1]{\pmb{#1}\normalfont}
+\newcommand{\crv}[1]{\emph{#1}\normalfont}
+\newcommand{\uni}[1]{\pmb{\hat{#1}}}
+\newcommand\YUGE{\fontsize{24.88}{40}\selectfont}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\numberline}[1]{#1~}
+\renewcommand{\phi}{\varphi}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\DeclarePairedDelimiter\p{(}{)}
+\DeclarePairedDelimiter\corch{[}{]}
+\DeclarePairedDelimiter\brck{\{}{\}}
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+
+\let\oldp\p
+\def\p{\@ifstar{\oldp}{\oldp*}}
+
+\let\oldcorch\corch
+\def\corch{\@ifstar{\oldcorch}{\oldcorch*}}
+
+\let\oldbrck\brck
+\def\brck{\@ifstar{\oldbrck}{\oldbrck*}}
+
+\makeatother
+\theoremstyle{definition}
+\newtheorem{cum}{Cuestión}
+\AtBeginEnvironment{proof}{\renewcommand{\qedsymbol}{}}{}{}
+
+
+% -- TÍTULO SENCILLO (DESCONTINUADO) -- %
+%\title{\huge{\textbf{Título Aquí}}}
+%\author{Julia Gómez Concejo \and Pedro Lalanda Delgado \\[25pt] Grado en Física, 2º Curso, Grupo L13}
+%\date{11 de abril, 2020}
+
+
+\begin{document}
+
+
+% -- LAYOUT -- %
+\pagestyle{fancy}
+\nocite{*}
+\fancyhf{}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+\fancyhf[LH]{\footnotesize{\emph{Modelado tridimensional del ARN mediante Random Walks}}}
+% IDs: -> Electromagnetismo: E\&M; -> ÓPTICA: OPT;
+\fancyhf[RF]{\footnotesize{\thepage}}
+\fancyhf[RH]{\tiny{Pedro Lalanda Delgado}}
+%\renewcommand{\contentsname}{Tabla de Contenidos}
+\setlength\parindent{0pt}
+\setlength{\parskip}{3mm}
+
+%\pagestyle{fancy}
+%\fancyhead{}
+%\fancyfoot{}
+%\fancyhead[L]{\large{\sc{Visión y %telescopios}}}
+%\fancyhead[R]{\slshape{Pedro L. y Julia G.}}
+%\fancyfoot[C]{\thepage}
+
+
+% -- TÍTULO -- %
+\begin{titlepage}
+\centering
+{ \bfseries \Large UNIVERSIDAD COMPLUTENSE DE MADRID}
+\vspace{0.5cm}
+
+{\bfseries  \Large FACULTAD DE CIENCIAS FÍSICAS} 
+\vspace{1cm}
+
+{\large DEPARTAMENTO DE ESTRUCTURA DE LA MATERIA, FÍSICA TÉRMICA Y ELECTRÓNICA}
+\vspace{0.8cm}
+
+%%%%Logo Complutense%%%%%
+{\includegraphics[width=0.3\textwidth]{UCM.png}}
+
+%%Para ajustar la portada a una sola página se puede reducir el tamaño del logo
+\vspace{0.8cm}
+
+%%PORTADA
+
+{\bfseries \Large TRABAJO DE FIN DE GRADO}
+\vspace{1cm}
+
+{\Large Código de TFG:  ETE45 } \vspace{2mm}
+
+{\Large Física Biológica}\vspace{2mm}
+
+{\Large Biological Physics}\vspace{2mm}
+
+{\Large Supervisor/es: Francisco J. Cao García, Juan Pedro García Villaluenga}\vspace{10mm} 
+
+{\bfseries \LARGE Pedro Lalanda Delgado}\vspace{2mm} 
+
+{\large Grado en Física}\vspace{2mm} 
+
+{\large Curso acad\'emico 2023-2024}\vspace{2mm} 
+
+{\large Convocatoria Ordinaria}\vspace{2mm} 
+
+\end{titlepage}
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\tableofcontents
+
+\newpage
+
+%%CONTRAPORTADA
+
+{\bfseries \large Modelado tridimensional del ARN mediante Random Walks}\vspace{10mm} 
+
+{\bfseries \large Resumen:} \vspace{5mm}
+
+Esto es una prueba para probar el formato del Resumen. Esto es una prueba para probar el formato del ResumenEsto es una prueba para probar el formato del ResumenEsto es una prueba para probar el formato del ResumenEsto es una prueba para probar el formato del ResumenEsto es una prueba para probar el formato del ResumenEsto es una prueba para probar el formato del ResumenEsto es una prueba para probar el formato del ResumenEsto es una prueba para probar el formato del ResumenEsto es una prueba para probar el formato del ResumenEsto es una prueba para probar el formato del ResumenEsto es una prueba para probar el formato del ResumenEsto es una prueba para probar el formato del ResumenEsto es una prueba para probar el formato del ResumenEsto es una prueba para probar el formato del Resumen.
+\vspace{1cm}
+
+{\bfseries \large Abstract: }\vspace{5mm} 
+
+This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.This is a test to prove the abstract's layout.
+\vspace{1cm}
+
+%%Comentar estas notas para que no salgan en la memoria
+{\Large\textbf{Nota: el título extendido (si procede), el resumen y el abstract deben estar en una misma página y su extensión no debe superar una página. Tamaño mínimo 11pto.}}
+\vspace{1cm}
+
+{\Large\textbf{Extensión máxima 20 páginas sin contar portada, contraportada y declaración responsable (sí se incluye índice, introducción, conclusiones y bibliografía}}
+\newpage
+
+%%Incluir aquí la declaración responsable de autoría y uso de las herramientas de IA.
+
+{\bfseries \large INCLUIR AQUÍ la Declaración Responsable sobre Autoría y Uso Ético de Herramientas de Inteligencia Artificial}
+\vspace{1cm}
+
+El documento se puede descargar en la página web: https://fisicas.ucm.es/tfg-gradoim
+\vspace{1cm}
+
+Y en https://fisicas.ucm.es/file/declaracion-responsable-sobre-autoria-y-uso-etico-de-ia?ver
+
+
+
+\newpage
+\begin{center}
+\Large\centering\textbf{Modelado tridimensional del ARN mediante Random Walks}
+\end{center}
+
+% -- ABSTRACT -- %
+\section{Abstract}\label{sec:summary}
+
+
+\newpage
+% -- INTRODUCCIÓN -- %
+\section{Introducción}\label{sec:intro}
+
+\newpage
+% -- TEORÍA -- %
+\section{Fundamento Teórico}\label{sec:thry}
+
+\subsection{Polímeros en las Células}\label{subsec:polymers}
+
+Según el dogma central de la biología molecular, la información genética dentro de cualquier célula se transmite del ADN al ARN, por medio de la transcripción, y de este último se traduce a proteína, que es la molécula que en última instancia la célula usa para realizar una acción dada.
+
+Por lo tanto, para el buen funcionamiento de cualquier célula viva, es necesaria la utilización de estos tres polímeros fundamentales,
+
+\begin{enumerate}
+    \item El ADN, molécula con dos cadenas en forma de doble hélice, que codifica las instrucciones genéticas necesarias para el buen funcionamiento de la maquinaria molecular de la célula mediante el uso de monómeros llamados nucleótidos (A, T, C, G), complementarios dos a dos mediante enlaces de hidrógeno, y que por su estructura complementaria, la célula es capaz de replicar con facilidad.
+    \item Las proteínas, que son las moléculas constituidas por monómeros llamados aminoácidos, que la célula usa tanto de manera estructural como para realizar una acción dada, a modo de catalizador en reacciones químicas (enzimas).
+    \item El ARN, similar al ADN en su estructura en el hecho de que también esta compuesta por ácidos nucleicos (A, U, C, G), pero diferente al ADN ya que no suelen encontrarse dos cadenas de ARN enlazadas entre sí como pasa con el ADN. Es interesante destacar que cada vez se descubren más casos para los que la célula utiliza el ARN, siendo también útil, por ejemplo, en reacciones catalíticas (ribozimas). En general, se clasifican las moléculas de ARN por función, por tamaño y por el lugar en el que se encuentran dentro de la célula (mRNA, tRNA, rRNA, miRNA).
+\end{enumerate}
+
+
+\subsection{Estructura del ARN}\label{subsec:arn}
+
+Como he comentado previamente, en este estudio, me enfoco principalmente en la estructura que adopta la molécula de ARN, que al no estar enlazada a otra cadena complementaria, como pasa con el ADN, se dobla sobre si misma debido a la interacción que sufren entre sí los ácidos nucleicos que la componen. Cabe discutir, en este caso, la estructura que tiene el ARN y como tratar de predecir la conformación que dicha molécula va a tomar.
+
+Cabe mencionar que la exposición teórica expuesta en esta sección se basa en el trabajo realizado por Paul G. Higgs (2000) \cite{phiggs}, quién aglutinó en la revisión citada los diferentes modelos de predicción de estructura del ARN.
+
+El ARN esta compuesto, por cuatro ácidos nucleicos (adenina, citosina, guanina, uracilo), conectados por una cadena de ribosas, unidas entre sí por fosfatos. Es esta la principal diferencia que la estructura del ARN encuentra con la estructura del ADN, cuya cadena principal esta formada por desoxiribosas, perdiendo un átomo de oxígeno respecto a la ribosa. La otra gran diferencia que encontramos entre el ADN y el ARN es en los ácidos nucleicos que usan, principalmente en que el ADN hace uso de la timina (T) y el ARN, en cambio, hace uso del uracilo (U), aunque ambas moléculas enlazan con la adenina por medio de un enlace de hidrógeno. Cabe mencionar también que el uracilo puede enlazarse también a la guanina, cosa que con la timina no pasa y habrá que tener en cuenta más adelante.
+
+Tanto para la cadena de ADN como para la de ARN se pueden definir direcciones en función de los átomos a los que se enlazan las ribosas y las desoxiribosas, también conocidas como pentosas. Se denomina al extremo de la cadena en la que el tercer carbono de las pentosas queda sin enlazar extremo 3' de la cadena. Por analogía, al extremo contrario, en el que el quinto carbono de las pentosas queda sin enlazar se le denomina extremo 5'.
+
+En lo que a la estructura tridimensional que el ARN presenta, se puede estudiar en varias partes, a diferencia de las proteínas:
+
+\begin{itemize}
+    \item La estructura secundaria del ARN se refiere a los enlaces que los diferentes nucleótidos de la cadena presentan entre sí, y como esos enlaces fuerzan a la cadena a doblarse sobre sí misma. Al igual que el ADN, el ARN al doblarse sobre sí mismo forma estructuras en forma de hélice cuando dos segmentos complementarios de la cadena se enlazan. Principalmente, la estructura secundaria se describe encontrando las hélices que se forman y las secciones de nucleótidos desemparejadas que no forman hélices (hairpins, loops...).
+    \item La estructura terciaria del ARN se refiere a interacciones menos relevantes entre los elementos de la cadena de ARN, como pueden ser interacciones entre tres nucleótidos, en lugar de solo dos; interacciones entre un nucleótido y la cadena de ribosas o interacciones entre secciones complementarias de nucleótidos desemparejados.
+\end{itemize}
+
+El principal objetivo de cualquier modelo computacional dedicado a predecir la estructura tridimensional del ARN es predecir correctamente su estructura secundaria, bajo la suposición de que la estructura terciaria se forma tras la conformación de la estructura secundaria, por ser interacciones con menos probabilidad de ocurrir y menos estables. A continuación expongo los diferentes modelos computacionales que existen para encontrar dicha estructura.
+
+\subsection{Predicción de la Estructura Secundaria del ARN}\label{subsubsec:thbasis}
+
+La mayoría de modelos computacionales tratan de encontrar la estructura del ARN que minimice la energía libre de la molécula. Para ello, se parte de unas reglas básicas: suponiendo que la cadena esta formada por $N$ nucleótidos:
+
+\begin{itemize}
+    \item Un par de bases complementarias $i$ y $j$ ha de estar al menos a cuatro nucleótidos de distancia, $\abs{i-j} \leq 4$, por ser la cadena demasiado rígida para permitir enlaces entre nucleótidos más próximos entre sí.
+    \item Dadas dos parejas de bases complementarias $i-j$ y $k-l$, tomamos las parejas como compatibles, i.e., que permitimos que ambas formen parte de la estructura a predecir, sí son solapan o una esta contenida dentro de la otra ($i<j<k<l$ o $i<k<l<j$). Descartamos aquellas parejas que no cumplan estas condiciones ($i<k<j<l$), que corresponderían a interacciones de la estructura terciaria entre segmentos lejanos de la cadena, comentados en la sección anterior.
+    \item La energía libre de un nucleótido libre es mayor que la energía libre de un nucleotido enlazado. Por lo tanto, suponemos que la molécula de ARN tenderá en todo caso a doblarse sobre sí misma para enlazar la mayor cantidad de pares de nucleotidos que le sea posible.
+\end{itemize}
+
+Con estas reglas básicas se desarrollan los modelos a explicados continuación.
+
+\subsubsection{Modelos de Programación Dinámica}\label{subsubsec:dynamic}
+
+Los modelos más comunes con diferencia son los de programación dinámica. Estos modelos se basan en la recursión para optimizar la rapidez con la que encuentran estructuras candidatas a ser la más estable, en un tiempo que escala de acuerdo a $O(N^3)$.
+
+El modelo más simple de esta categoría es el descrito por R. Nussinov (1980) \cite{nussinov}. Asignamos una energía $\epsilon_{ij} = -1$ a cada par de bases enlazadas y, en caso de no estar enlazadas, asignamos una energía a la base de $\epsilon_{ij} = 0$, siendo $\epsilon_{ij}$ la enegía de un par de bases dado. Se pretende obtener la enegía mínima del segmento entre dos bases dadas $E_{ij}$. Supóngase que la última base, $j$, esta enlazada con una base $i < k < j$. Podemos descomponer la energía $E_{ij}$ tal que,
+
+\begin{equation}\label{eq:recurrence}
+    E_{ij} = E_{i,k-1} + E_{k+1, j-1} + \epsilon_{kj}
+\end{equation}
+
+Si la base $j$ resulta no estar enlazada con ningún nucleotido, se puede intuir de la \er[ecuación]{eq:recurrence} que $E_{ij} = E_{i,j-1}$. Partiendo de esta ecuación, se puede encontrar la energía mínima del segmento, que corresponderá con la del enlace que lo minimice, siendo esta
+
+\begin{equation}\label{eq:mimimum}
+    E_{ij} = \min\p{E_{i,j-1}, \min_{i \leq k \leq j-4}\p{E_{i,k-1} + E_{k+1, j-1} + \epsilon_{kj}}}
+\end{equation}
+
+Partiendo de la \er[ecuación]{eq:mimimum}, con un algoritmo de recursión que vaya descomponiendo el segmento a considerar en segmentos más pequeños y vaya encontrando para esos segmentos más pequeños sus energías mínimas, se puede encontrar la energía mínima de la cadena $E_{1N}$, así como la conformación de la cadena de ARN que la minimiza.
+
+Lo que todos los modelos de programación dinámica tienen en común es el procedimiento recursivo aquí expuesto. Las diferencias entre ellos son los parámetros termodinámicos que se tienen en cuenta en los modelos, como sería en el caso del modelo expuesto $\epsilon_{ij}$. Estos parámetros se pueden ajustar para reflejar mejor los resultados obtenidos en experimentos termodinámicos realizados con cadenas de ARN. 
+
+Usaré en este trabajo estos modelos como referencia para comparar los resultados obtenidos con el modelo Random Walk con los obtenidos con programación dinámica.
+
+\subsubsection{Otros Modelos}\label{subsubsec:others}
+
+Cabe mencionar la existencia de otros modelos de predicción de estructura del ARN, aunque no haré uso de ellos en este trabajo.
+
+\begin{itemize}
+    \item \textit{Algoritmos Kinetic Folding}: Estos modelos parten del hecho de que las energías de enlace de las hélices encontradas en el ARN suelen ser mucho mayores a la energía de las fluctuaciones térmicas, $kT$, y por lo tanto una vez formadas es extremadamente difícil que estas hélices se descompongan. Por lo tanto, se pueden encontrar las estructuras de mínima energía libre montando hélices en base a la secuencia del ARN de manera secuencial.
+    \item \textit{Algoritmos Genéticos}: De la misma forma, se puede resolver el problema mediante un algoritmo que encuentre la estructura del ARN con un proceso que imite la evolución biológica: creando una población de conformaciones de cadenas heterogéneas, seleccionando las que minimicen la energía libre y mezclando su estructura para crear una nueva población (mutación y selección).
+    \item \textit{Métodos Comparativos}: Es posible deducir la estructura que tomará el ARN a partir del estudio de cadenas de ARN homólogas a la estudiada en otras especies.
+\end{itemize}
+
+
+\subsection{Modelos Random Walk}\label{subsec:rndwalk}
+
+Los modelos random walk son una clase de modelos basados en la idea de recorrer un espacio matemático dado mediante una sucesión de pasos tomados de manera aleatoria \cite{doyle} \cite{pearson}.
+
+Su aplicación se extiende a múltiples disciplinas, incluyendo entre ellas a muchas originarias de la física, como pueden ser la cristalografía o la física de fluidos \cite{weiss}, así como a disciplinas ajenas al estudio del mundo natural, como puede ser el estudio de los mercados financieros\cite{blsch}.
+
+El modelo que en este trabajo se estudia es un modelo random walk, aplicado al estudio de la estructura del ADN, conocido como el modelo freely jointed chain. En este trabajo se extiende dicho estudio al estudio del ARN. A continuación expongo el modelo freely jointed chain del ADN, que es la base de este trabajo. Se puede encontrar una explicación en detalle del modelo en R. Phillips, et. al. (2013) \cite{phillips}.
+
+\subsubsection{Modelo Freely Jointed Chain del ADN}\label{subsubsec:rndpoly} %PAG 347
+
+Supongamos que una cadena de ADN dada la podemos dividir en segmentos rígidos de una longitud dada, $a$, conectados entre sí por uniones flexibles. Se denomina segmentos de Kuhn a los segmentos definidos. Queremos encontrar una distribución de probabilidad $p(\vec{R}, N)$ que nos indique con que probabilidad una cadena de $N$ nucleotidos tenga uno de sus extremos situados en la posición $\vec{R}$, suponiendo que la posición del otro extremo es el origen.
+
+Para encontrar esta distribución, vamos a limitarnos primero al caso unidimensional, $p(x, N)$. En el caso unidimensional, los segmentos consecutivos solo podrán estar dirigidos con respecto a los segmentos previos en dos direcciones: hacia la izquierda o hacia la derecha. Si asignamos la misma probabilidad de que esto ocurra a las dos direcciones, i.e., $p_l = p_r = 1/2$, podemos obtener la probabilidad de dar un total de $n_r$ pasos a la derecha del siguiente modo,
+
+\begin{equation}\label{eq:binom}
+    p\p{n_r, N} = \binom{N}{n_r} \p{\frac{1}{2}}^N = \frac{N!}{n_r! \p{N - n_r}!} \p{\frac{1}{2}}^N
+\end{equation}
+
+Podemos observar pues que la cantidad de pasos que tomo en una de las dos direcciones se ajusta a la distribución binomial. Teniendo en cuenta que $R = (n_r - n_l) a$, siendo $n_l$ el número de pasos dados a la izquierda, y que $n_r + n_l = N$, obtenemos
+
+\begin{equation}\label{eq:fancy}
+    p\p{R, N} = \frac{N!}{\p{\frac{N}{2} + \frac{R}{2a}}! \p{\frac{N}{2} - \frac{R}{2a}}!} \p{\frac{1}{2}}^N
+\end{equation}
+
+Para el caso límite en el que el tamaño de la cadena bajo estudio es mucho menor que su longitud al estar totalmente estirada, $R \ll Na$, podemos simplificar la \er[ecuación]{eq:fancy} mediante la aproximación de Striling ($\ln{n!} \approx n \ln{n} - n + (1/2) \ln{\p{2 \pi n}}$, para $n \gg 1$) y la aproximación de Taylor ($\ln{\p{1 + x}} \approx x - x^2 / 2$, para $x \ll 1$), para obtener la siguiente distribución gaussiana
+
+\begin{equation}\label{eq:gauss}
+    p\p{R, N} = \frac{1}{\sqrt{2 \pi N a^2}} e^{-\frac{R^2}{2 N a^2}}
+\end{equation}
+
+Podemos extender la distribución obtenida al caso tridimensional teniendo en cuenta que $R^2 = \abs{\vec{R}}^2$, y recalculando los valores para normalizar la distribucion,
+
+\begin{equation}\label{eq:3dgauss}
+    p\p{\vec{R}, N} = \p{\frac{3}{2 \pi N a^2}}^{\frac{3}{2}} e^{-\frac{3R^2}{2 N a^2}}
+\end{equation}
+
+% -- MAT&METH -- %
+\section{Materiales y Métodos}\label{sec:mym}
+
+Para comparar los diferentes modelos que he expuesto en la \nr[sección]{sec:thry}, haré uso de programas escritos en Python.
+
+\subsection{Simulación en Python}\label{subsec:python}
+
+
+\subsection{Otros Programas}\label{subsec:packages}
+
+
+\newpage
+% -- RESULTADOS -- %
+\section{Resultados}\label{sec:res}
+
+
+\newpage
+% -- CONCLUSIÓN -- %
+\section{Conclusión}\label{sec:cnc}
+
+\newpage
+% -- REFERENCIAS -- %
+\newpage
+\printbibliography[heading=bibnumbered]\label{sec:refs}
+
+
+% -- APÉNDICES -- %
+%\section{Apéndice I: Título}
+
+
+\end{document}

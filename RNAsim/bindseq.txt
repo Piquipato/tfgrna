@@ -1,0 +1,8 @@
+[INFO]: Main sequence of RNA: 
+GACCATTACCGGGCTTAGCTATAAATGGATGCTTAATTCGTTGCTAGAGCGTTTGAAGACCATATTTGCT
+GATCGACCAACGAAGGATAATAGTGTCTCAGTTTACAGGCCGCGCTCAAAGAGCATGCTGATTATTTTCC
+C
+[INFO]: Binding diagram of RNA: 
+((......((................))......((.)).))............................
+..........................(...).................((((...).)...)).......
+.

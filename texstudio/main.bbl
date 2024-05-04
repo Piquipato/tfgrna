@@ -1,0 +1,228 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{doyle}{booklet}{}
+    \name{author}{2}{}{%
+      {{hash=DPG}{%
+         family={Doyle},
+         familyi={D\bibinitperiod},
+         given={Peter\bibnamedelima G.},
+         giveni={P\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=SJL}{%
+         family={Snell},
+         familyi={S\bibinitperiod},
+         given={J.\bibnamedelima Laurie},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DPGSJL1}
+    \strng{fullhash}{DPGSJL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{howpublished}{arXiv:math}
+    \field{title}{Random walks and electric networks}
+    \field{year}{2000}
+  \endentry
+
+  \entry{blsch}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FB}{%
+         family={Fischer},
+         familyi={F\bibinitperiod},
+         given={Black},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Scholes},
+         familyi={S\bibinitperiod},
+         given={Myron},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FBSM1}
+    \strng{fullhash}{FBSM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \verb{doi}
+    \verb https://doi.org/10.1086/260062
+    \endverb
+    \field{pages}{637\bibrangedash 654}
+    \field{title}{The Pricing of Options and Corporate Liabilities}
+    \field{volume}{81}
+    \field{journaltitle}{Journal of Political Economy}
+    \field{year}{1973}
+  \endentry
+
+  \entry{phiggs}{article}{}
+    \name{author}{1}{}{%
+      {{hash=HPG}{%
+         family={Higgs},
+         familyi={H\bibinitperiod},
+         given={Paul\bibnamedelima G.},
+         giveni={P\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HPG1}
+    \strng{fullhash}{HPG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{doi}
+    \verb https://doi.org/10.1017/S0033583500003620
+    \endverb
+    \field{pages}{199\bibrangedash 253}
+    \field{title}{RNA secondary structure: physical and computational aspects}
+    \field{volume}{33}
+    \field{journaltitle}{Quarterly Reviews of Biophysics}
+    \field{year}{2000}
+  \endentry
+
+  \entry{nussinov}{article}{}
+    \name{author}{2}{}{%
+      {{hash=NR}{%
+         family={Nussinov},
+         familyi={N\bibinitperiod},
+         given={Ruth},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=JAB}{%
+         family={Jacobson},
+         familyi={J\bibinitperiod},
+         given={Ann\bibnamedelima B.},
+         giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NRJAB1}
+    \strng{fullhash}{NRJAB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \verb{doi}
+    \verb https://doi.org/10.1073%2Fpnas.77.11.6309
+    \endverb
+    \field{pages}{6309\bibrangedash 6313}
+    \field{title}{Fast algorithm for predicting the secondary structure of
+  single-stranded RNA}
+    \field{volume}{77}
+    \field{journaltitle}{Proceedings of the National Academy of Sciencesof the
+  United States of America}
+    \field{year}{1980}
+  \endentry
+
+  \entry{pearson}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PK}{%
+         family={Pearson},
+         familyi={P\bibinitperiod},
+         given={Karl},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PK1}
+    \strng{fullhash}{PK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb https://doi.org/10.1038/072294b0
+    \endverb
+    \field{pages}{294}
+    \field{title}{The Problem of the Random Walk}
+    \field{volume}{72}
+    \field{journaltitle}{Nature}
+    \field{year}{1905}
+  \endentry
+
+  \entry{phillips}{book}{}
+    \name{author}{4}{}{%
+      {{hash=PR}{%
+         family={Phillips},
+         familyi={P\bibinitperiod},
+         given={Rob},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=KJ}{%
+         family={Kondev},
+         familyi={K\bibinitperiod},
+         given={Jane},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=TJ}{%
+         family={Theriot},
+         familyi={T\bibinitperiod},
+         given={Julie},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GHG}{%
+         family={García},
+         familyi={G\bibinitperiod},
+         given={Hernan\bibnamedelima G.},
+         giveni={H\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Garland Science}%
+    }
+    \strng{namehash}{PRKJTJ+1}
+    \strng{fullhash}{PRKJTJGHG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{chapter}{8}
+    \field{edition}{2nd Edition}
+    \field{isbn}{978-0-8153-4450-6}
+    \field{pages}{311\bibrangedash 354}
+    \field{title}{Physical Biology of the Cell}
+    \field{year}{2013}
+  \endentry
+
+  \entry{weiss}{book}{}
+    \name{author}{1}{}{%
+      {{hash=WGH}{%
+         family={Weiss},
+         familyi={W\bibinitperiod},
+         given={George\bibnamedelima H.},
+         giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {NH}%
+    }
+    \strng{namehash}{WGH1}
+    \strng{fullhash}{WGH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{isbn}{978-0-4448-1606-1}
+    \field{series}{Random Materials and Processes}
+    \field{title}{Aspects and applications of the random walk}
+    \field{year}{1994}
+  \endentry
+\enddatalist
+\endinput
