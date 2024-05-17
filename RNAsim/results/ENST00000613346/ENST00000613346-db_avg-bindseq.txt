@@ -1,0 +1,20 @@
+[INFO]: Main sequence of RNA: 
+GCUAUCAGGAGGAGCAAAAGGGAAGGAUCUGCUGCUGGGGGCUCGCUGGGUGACCCUUUGCCAGACGAAA
+AGAGCUGGUCGAGAGAGAAGCGCUUGGCAGGAGCUCUCUGCGGGACCUAAGCUCCGUGGCUGCUCGGGAU
+CCCUACGUCCGCUGCUGCUGAAGGAGCAGAGGGGAGGACGCCAGCGGUUGCUUACUGGAGCCUGGAGGAA
+AAUGGAAACAUCAUUCCCUAGAAACAGUUGAAGUUGACAGACCUAGAGGUUGACAAAAGGACACGACACU
+AGGGAAUUUGCAUUGUCAUGUUUCGAAAUACCAUUCCAAAGACCUGCAAAUAAGAUCAGCUUUGAGUGAA
+CUUUGACAGAAGAUGUUUCGACAGUUUUAUCUCUGGACAUGUUUAGCUUCAGGGAUCAUCCUGGGCUCUC
+UCUUUGAAAUCUGCUUGGGCCAGUAUGAUGAUGGUACAAUUCUGGUGGACAACAUGCUGAUCAAAGGGAC
+UGCUGGAGGACCAGACCCCACCAUAGAACUUUCUUUAAAGGAUAAUGUGGAUUACUGGGUGUUGAUGGAU
+CCUGUUAAGCAAAUGCUUUU
+[INFO]: Binding diagram of RNA: 
+.......(..(((((..........).)...)).)).................(.....).(......(.
+.).......((((.(((..(.())))()..((.)))))).).((.(((.(((.....))(()))...)).
+)....).)..).((...(((.(()).).....(((............((..(...(...((((..)(())
+))(.....(((..)(....)))...(((((.()))...)....)(..(.))..)...........(.((.
+(((....((.).).....)).))..(.(.....))..........................((....)).
+........)).....(((.((((((()).(.((...((())))(().().))()..)..(..))))).((
+((((())).(.().)))))..)).(())(((()))).))().)...........).))...))......(
+(.))).)..............................).)))................((...).)()((
+..)))...............

@@ -1,0 +1,19 @@
+{
+    "seq_region_name": "5",
+    "display_name": "MACROH2A1-208",
+    "strand": -1,
+    "version": 1,
+    "source": "havana",
+    "object_type": "Transcript",
+    "Parent": "ENSG00000113648",
+    "end": 135399214,
+    "length": 758,
+    "assembly_name": "GRCh38",
+    "logic_name": "havana_homo_sapiens",
+    "biotype": "retained_intron",
+    "db_type": "core",
+    "species": "homo_sapiens",
+    "is_canonical": 0,
+    "start": 135369481,
+    "id": "ENST00000506218"
+}

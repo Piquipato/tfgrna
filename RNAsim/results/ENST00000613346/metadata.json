@@ -1,0 +1,19 @@
+{
+    "source": "havana",
+    "biotype": "protein_coding",
+    "Parent": "ENSG00000150275",
+    "strand": -1,
+    "logic_name": "havana_homo_sapiens",
+    "species": "homo_sapiens",
+    "start": 54378816,
+    "display_name": "PCDH15-221",
+    "version": 4,
+    "seq_region_name": "10",
+    "assembly_name": "GRCh38",
+    "object_type": "Transcript",
+    "end": 55627942,
+    "length": 580,
+    "is_canonical": 0,
+    "id": "ENST00000613346",
+    "db_type": "core"
+}

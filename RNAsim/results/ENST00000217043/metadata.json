@@ -1,0 +1,19 @@
+{
+    "logic_name": "ensembl_havana_transcript_homo_sapiens",
+    "display_name": "R3HDML-201",
+    "assembly_name": "GRCh38",
+    "Parent": "ENSG00000101074",
+    "id": "ENST00000217043",
+    "length": 1323,
+    "is_canonical": 1,
+    "end": 44351238,
+    "start": 44337043,
+    "db_type": "core",
+    "object_type": "Transcript",
+    "source": "ensembl_havana",
+    "species": "homo_sapiens",
+    "biotype": "protein_coding",
+    "version": 4,
+    "seq_region_name": "20",
+    "strand": 1
+}

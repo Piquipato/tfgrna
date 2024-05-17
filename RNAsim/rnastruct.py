@@ -2,11 +2,12 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 import pandas as pd
-import random, sys
+import random, sys, os
 import multiprocessing as mp
 from textwrap import wrap as splitk
 import time
 import tqdm
+import RNA
 
 def sph(r, theta, phi): # Generator of Spherical Coordinate Vector
     return (r*np.array([np.sin(theta)*np.cos(phi), \
@@ -52,7 +53,9 @@ def binding_links(bdna):
         'AT',
         'TA',
         'CG',
-        'GC'
+        'GC',
+        'GU',
+        'UG'
     ]
     for bind in allowed_binds:
         if bind in bdna:
@@ -126,14 +129,15 @@ def get_binds(tpl_ij):
         return current
     return []
 
-def calc_bptbl(vecs, seqs):
+def calc_bptbl(vecs, seqs, log=False):
     indeces = []
     coords = []
     nucleotides = []
     positions = []
     k = 0
     for i in range(len(seqs)):
-        loading(i+1, len(seqs))
+        if log:
+            loading(i+1, len(seqs))
         seq = seqs[i]
         X0, X1, x = unpack_vector(vecs[i, :])
         for j in range(len(seq)):
@@ -164,7 +168,13 @@ def calc_fit(arg_tpl):
         D = pos1 - pos2
         d = np.sqrt(np.dot(D, D))
         if d < nt:
-            find = 'b.{coord1}>{coord2}:{bp1}{bp2}'.format(
+            what = '{bp1}{bp2}'.format(bp1=bp1, bp2=bp2).upper()
+            if what == 'GU' or what == 'UG':
+                pre = 'nb.'
+            else:
+                pre = 'b.'
+            find = '{pre}{coord1}>{coord2}:{bp1}{bp2}'.format(
+                pre=pre,
                 coord1=crd1,
                 coord2=crd2,
                 bp1=bp1,
@@ -199,8 +209,9 @@ def old_match_binds(tbl, nt):
             k += 1
     return binds
 
-def optimized_match_binds(tbl, bps, nt):
-    print('[INFO] : Entered into optimized_match_binds w/no loading')
+def optimized_match_binds(tbl, bps, nt, log=False):
+    if log:
+        print('[INFO] : Entered into optimized_match_binds w/no loading')
     index = tbl['Index'].values
     binds = []
     positions = tbl['Position'].values
@@ -295,22 +306,31 @@ def match_binds(tbl, nt, multi=True, mtch=False):
 
 def find_bindseq(seq, tbl, binds):
     bindseq = ['.' for i in range(len(seq))]
-    index = tbl['Index'].values
+    bindlst = []
+    index = list(tbl['Index'].values)
     crds = list(tbl['Coordinates'].values)
+    bindmat = np.zeros((len(seq), len(seq)))
     for bind in binds:
         crd1 = bind.split('>')[0][2:]
         crd2 = bind.split('>')[1].split(':')[0]
         idx1 = index[crds.index(crd1)]
         idx2 = index[crds.index(crd2)]
+        bindmat[crds.index(crd1), crds.index(crd2)] += 1
+        bindmat[crds.index(crd2), crds.index(crd1)] += 1
         bindseq[idx1] = '('
         bindseq[idx2] = ')'
-    return ''.join(bindseq)
+        bindlst.append((idx1, idx2))
+    return ''.join(bindseq), bindlst, bindmat
+
 
 def conformate(seq, lp, nt=0.34, processing=False, method='new', mtch=False,
-               plotbp=False, plot=True):
+               plotbp=False, plot=True, log=False, path='./out.png'):
     N = len(seq)
-    print(np.ceil(nt * N / (2*lp)), np.ceil((2*lp) / nt))
-    print(N, np.ceil(nt * N / (2*lp)) * np.ceil((2*lp) / nt))
+    mypath = os.path.dirname(path)
+    basename = os.path.basename(path)[:-4]
+    if log:
+        print(np.ceil(nt * N / (2*lp)), np.ceil((2*lp) / nt))
+        print(N, np.ceil(nt * N / (2*lp)) * np.ceil((2*lp) / nt))
     #sgs = int(np.ceil(nt * N / (2*lp)))  number of segments
     bps = int(np.ceil((2*lp) / nt)) # nucleotides per segment
     sgs = int(np.ceil(N / bps)) # number of segments
@@ -329,7 +349,8 @@ def conformate(seq, lp, nt=0.34, processing=False, method='new', mtch=False,
         sumsph += sphs[k]
     vecs = np.array(vecs, dtype=np.double)
     lim = 1.05*np.max([np.abs(np.min(vecs)), np.abs(np.max(vecs))])
-    print(len(vecs), sgs)
+    if log:
+        print(len(vecs), sgs)
 
     binds = []
     if method == 'old':
@@ -337,7 +358,8 @@ def conformate(seq, lp, nt=0.34, processing=False, method='new', mtch=False,
             with open('binds.txt', 'a') as f:
                 start_time = time.perf_counter()
                 for i in range(vecs.shape[0] - 1):
-                    loading(i, vecs.shape[0] - 2)
+                    if log:
+                        loading(i, vecs.shape[0] - 2)
                     for j in range(i+1, vecs.shape[0]):
                         if check_binds(vecs[i, :], vecs[j, :], nt):
                             current = find_binds(vecs[i], seqs[i], i, \
@@ -362,29 +384,32 @@ def conformate(seq, lp, nt=0.34, processing=False, method='new', mtch=False,
                         binds.append(bind)
     if method == 'new':
         start_time = time.perf_counter()
-        tbl = calc_bptbl(vecs, seqs)
-        tbl.to_excel('nucleotides.xlsx', index=True)
-        sys.stdout.write('\n')
+        tbl = calc_bptbl(vecs, seqs, log=log)
+        tbl.to_excel(mypath + f'/{basename}-nucleotides.xlsx', index=True)
+        if log:
+            sys.stdout.write('\n')
         if mtch:
             binds = match_binds(tbl, nt, multi=processing)
         else:
-            binds = optimized_match_binds(tbl, bps, nt)
-        sys.stdout.write('\n')
+            binds = optimized_match_binds(tbl, bps, nt, log=log)
+        if log:
+            sys.stdout.write('\n')
         finish_time = time.perf_counter()
-    print('Program finished in {secs} seconds with mp: ' \
-          '{multi}'.format(secs=(finish_time-start_time), multi=processing))
-    store_list(binds, file='bindings.txt')
-    store_list(seqs, 'sequences.txt')
-    print(len(seqs), len(seqs[0]), len(seqs[-1]), len(seq) % bps)
-    print(np.sum([len(seqs[i]) for i in range(len(seqs))]), len(seq))
-    print(seq[-(len(seq) % bps):])
-    print(len(binds) / (2 * len(seq) - 5) * 100)
-    print(len(binds) / (np.ceil(N/2) - 1) * 100)
-    bindseq = find_bindseq(seq, tbl, binds)
+    if log:
+        print('Program finished in {secs} seconds with mp: ' \
+            '{multi}'.format(secs=(finish_time-start_time), multi=processing))
+        print(len(seqs), len(seqs[0]), len(seqs[-1]), len(seq) % bps)
+        print(np.sum([len(seqs[i]) for i in range(len(seqs))]), len(seq))
+        print(seq[-(len(seq) % bps):])
+        print(len(binds) / (2 * len(seq) - 5) * 100)
+        print(len(binds) / (np.ceil(N/2) - 1) * 100)
+    store_list(binds, file=mypath + f'/{basename}-bindings.txt')
+    store_list(seqs, mypath + f'/{basename}-sequences.txt')
+    bindseq, bindlst, bindmat = find_bindseq(seq, tbl, binds)
     beauty = lambda s, x: '\n'.join(splitk(s, x))
     bindseqout = '[INFO]: Main sequence of RNA: \n' + beauty(seq, 70) + '\n' + \
         '[INFO]: Binding diagram of RNA: \n' + beauty(bindseq, 70) + '\n'
-    with open('bindseq.txt', 'w') as f:
+    with open(mypath + f'/{basename}-bindseq.txt', 'w') as f:
         f.write(bindseqout)
 
     if plot:
@@ -408,8 +433,26 @@ def conformate(seq, lp, nt=0.34, processing=False, method='new', mtch=False,
             for position in positions:
                 ax.scatter(position[0], position[1], position[2], \
                         marker='o', facecolors='#cc0000')
-        plt.show()
-    return binds, bindseq
+        fig.savefig(path)
+        plt.close()
+    return binds, bindseq, bindlst, bindmat
+
+def mult_conformate(seq, **kwargs):
+    nt = kwargs['nt'] if 'nt' in kwargs else 0.34
+    lp = kwargs['lp'] if 'lp' in kwargs else (3/2)*nt
+    path = kwargs['path'] if 'path' in kwargs else './out.png'
+    plot = kwargs['plot'] if 'plot' in kwargs else False
+    iter = kwargs['iter'] if 'iter' in kwargs else 10
+    matrix = np.zeros((len(seq), len(seq)))
+    for i in range(iter):
+        binds, bindseq, bindlst, bindmat = conformate(
+            seq, lp, processing=False, nt=nt, plot=plot, path=path
+        )
+        matrix += bindmat
+    matrix /= np.sum(matrix)
+    #matrix /= iter
+    return matrix
+
 
 if __name__ == '__main__':
     with open('example.txt', 'r') as f:

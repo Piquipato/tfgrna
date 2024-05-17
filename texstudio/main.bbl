@@ -16,62 +16,65 @@
   {}
 \endgroup
 
-\datalist[entry]{nty/global//global/global}
-  \entry{doyle}{booklet}{}
-    \name{author}{2}{}{%
-      {{hash=DPG}{%
-         family={Doyle},
-         familyi={D\bibinitperiod},
-         given={Peter\bibnamedelima G.},
-         giveni={P\bibinitperiod\bibinitdelim G\bibinitperiod},
-      }}%
-      {{hash=SJL}{%
-         family={Snell},
-         familyi={S\bibinitperiod},
-         given={J.\bibnamedelima Laurie},
-         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{DPGSJL1}
-    \strng{fullhash}{DPGSJL1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{D}
-    \field{sortinithash}{D}
-    \field{howpublished}{arXiv:math}
-    \field{title}{Random walks and electric networks}
-    \field{year}{2000}
-  \endentry
-
-  \entry{blsch}{article}{}
-    \name{author}{2}{}{%
-      {{hash=FB}{%
-         family={Fischer},
-         familyi={F\bibinitperiod},
-         given={Black},
+\datalist[entry]{none/global//global/global}
+  \entry{alberts}{book}{}
+    \name{author}{7}{}{%
+      {{hash=AB}{%
+         family={Alberts},
+         familyi={A\bibinitperiod},
+         given={Bruce},
          giveni={B\bibinitperiod},
       }}%
-      {{hash=SM}{%
-         family={Scholes},
-         familyi={S\bibinitperiod},
-         given={Myron},
+      {{hash=HR}{%
+         family={Heald},
+         familyi={H\bibinitperiod},
+         given={Rebecca},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=JA}{%
+         family={Johnson},
+         familyi={J\bibinitperiod},
+         given={Alexander},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Morgan},
+         familyi={M\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Raff},
+         familyi={R\bibinitperiod},
+         given={Martin},
          giveni={M\bibinitperiod},
       }}%
+      {{hash=RK}{%
+         family={Roberts},
+         familyi={R\bibinitperiod},
+         given={Keith},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=WP}{%
+         family={Walter},
+         familyi={W\bibinitperiod},
+         given={Peter},
+         giveni={P\bibinitperiod},
+      }}%
     }
-    \strng{namehash}{FBSM1}
-    \strng{fullhash}{FBSM1}
+    \list{publisher}{1}{%
+      {W. W. Norton \& Company}%
+    }
+    \strng{namehash}{ABHRJA+1}
+    \strng{fullhash}{ABHRJAMDRMRKWP1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{F}
-    \field{sortinithash}{F}
-    \verb{doi}
-    \verb https://doi.org/10.1086/260062
-    \endverb
-    \field{pages}{637\bibrangedash 654}
-    \field{title}{The Pricing of Options and Corporate Liabilities}
-    \field{volume}{81}
-    \field{journaltitle}{Journal of Political Economy}
-    \field{year}{1973}
+    \field{chapter}{1}
+    \field{edition}{7th Edition}
+    \field{isbn}{978-0-3938-8482-1}
+    \field{pages}{1\bibrangedash 48}
+    \field{title}{Molecular Biology of the Cell}
+    \field{year}{2022}
   \endentry
 
   \entry{phiggs}{article}{}
@@ -87,8 +90,6 @@
     \strng{fullhash}{HPG1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{H}
-    \field{sortinithash}{H}
     \verb{doi}
     \verb https://doi.org/10.1017/S0033583500003620
     \endverb
@@ -118,8 +119,6 @@
     \strng{fullhash}{NRJAB1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{N}
-    \field{sortinithash}{N}
     \verb{doi}
     \verb https://doi.org/10.1073%2Fpnas.77.11.6309
     \endverb
@@ -130,6 +129,36 @@
     \field{journaltitle}{Proceedings of the National Academy of Sciencesof the
   United States of America}
     \field{year}{1980}
+  \endentry
+
+  \entry{doyle}{booklet}{}
+    \name{author}{2}{}{%
+      {{hash=DPG}{%
+         family={Doyle},
+         familyi={D\bibinitperiod},
+         given={Peter\bibnamedelima G.},
+         giveni={P\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=SJL}{%
+         family={Snell},
+         familyi={S\bibinitperiod},
+         given={J.\bibnamedelima Laurie},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DPGSJL1}
+    \strng{fullhash}{DPGSJL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb https://doi.org/10.48550/arXiv.math/0001057
+    \endverb
+    \field{howpublished}{arXiv:math}
+    \field{title}{Random walks and electric networks}
+    \verb{url}
+    \verb https://arxiv.org/abs/math/0001057v1
+    \endverb
+    \field{year}{2000}
   \endentry
 
   \entry{pearson}{article}{}
@@ -145,8 +174,6 @@
     \strng{fullhash}{PK1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{P}
-    \field{sortinithash}{P}
     \verb{doi}
     \verb https://doi.org/10.1038/072294b0
     \endverb
@@ -155,6 +182,57 @@
     \field{volume}{72}
     \field{journaltitle}{Nature}
     \field{year}{1905}
+  \endentry
+
+  \entry{weiss}{book}{}
+    \name{author}{1}{}{%
+      {{hash=WGH}{%
+         family={Weiss},
+         familyi={W\bibinitperiod},
+         given={George\bibnamedelima H.},
+         giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {NH}%
+    }
+    \strng{namehash}{WGH1}
+    \strng{fullhash}{WGH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{isbn}{978-0-4448-1606-1}
+    \field{series}{Random Materials and Processes}
+    \field{title}{Aspects and applications of the random walk}
+    \field{year}{1994}
+  \endentry
+
+  \entry{blsch}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FB}{%
+         family={Fischer},
+         familyi={F\bibinitperiod},
+         given={Black},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Scholes},
+         familyi={S\bibinitperiod},
+         given={Myron},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FBSM1}
+    \strng{fullhash}{FBSM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb https://doi.org/10.1086/260062
+    \endverb
+    \field{pages}{637\bibrangedash 654}
+    \field{title}{The Pricing of Options and Corporate Liabilities}
+    \field{volume}{81}
+    \field{journaltitle}{Journal of Political Economy}
+    \field{year}{1973}
   \endentry
 
   \entry{phillips}{book}{}
@@ -191,8 +269,6 @@
     \strng{fullhash}{PRKJTJGHG1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{P}
-    \field{sortinithash}{P}
     \field{chapter}{8}
     \field{edition}{2nd Edition}
     \field{isbn}{978-0-8153-4450-6}
@@ -201,28 +277,203 @@
     \field{year}{2013}
   \endentry
 
-  \entry{weiss}{book}{}
+  \entry{pepo}{online}{}
     \name{author}{1}{}{%
-      {{hash=WGH}{%
-         family={Weiss},
-         familyi={W\bibinitperiod},
-         given={George\bibnamedelima H.},
-         giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod},
+      {{hash=LDP}{%
+         family={Lalanda-Delgado},
+         familyi={L\bibinithyphendelim D\bibinitperiod},
+         given={Pedro},
+         giveni={P\bibinitperiod},
       }}%
     }
-    \list{publisher}{1}{%
-      {NH}%
-    }
-    \strng{namehash}{WGH1}
-    \strng{fullhash}{WGH1}
+    \strng{namehash}{LDP1}
+    \strng{fullhash}{LDP1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{W}
-    \field{sortinithash}{W}
-    \field{isbn}{978-0-4448-1606-1}
-    \field{series}{Random Materials and Processes}
-    \field{title}{Aspects and applications of the random walk}
+    \field{title}{Piquipato/tfgrna}
+    \verb{url}
+    \verb https://github.com/Piquipato/tfgrna
+    \endverb
+    \field{year}{2024}
+  \endentry
+
+  \entry{hofacker}{article}{}
+    \name{author}{4}{}{%
+      {{hash=HIL}{%
+         family={Hofacker},
+         familyi={H\bibinitperiod},
+         given={Ivo\bibnamedelima L.},
+         giveni={I\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Schuster},
+         familyi={S\bibinitperiod},
+         given={Peter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=FW}{%
+         family={Fontana},
+         familyi={F\bibinitperiod},
+         given={Walter},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=SPF}{%
+         family={Stadler},
+         familyi={S\bibinitperiod},
+         given={Peter\bibnamedelima F.},
+         giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HILSPFW+1}
+    \strng{fullhash}{HILSPFWSPF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb https://doi.org/10.1098/rspb.1994.0040
+    \endverb
+    \field{pages}{279–284}
+    \field{title}{From sequences to shapes and back: a case study in RNA
+  secondary structures}
+    \field{volume}{255}
+    \field{journaltitle}{Proceedings of the Royal Society, Biological Sciences}
     \field{year}{1994}
+  \endentry
+
+  \entry{seqfold}{article}{}
+    \name{author}{3}{}{%
+      {{hash=OZ}{%
+         family={Ouyang},
+         familyi={O\bibinitperiod},
+         given={Zhengqing},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=SMP}{%
+         family={Snyder},
+         familyi={S\bibinitperiod},
+         given={Michael\bibnamedelima P.},
+         giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=CHY}{%
+         family={Chang},
+         familyi={C\bibinitperiod},
+         given={Howard\bibnamedelima Y.},
+         giveni={H\bibinitperiod\bibinitdelim Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{OZSMPCHY1}
+    \strng{fullhash}{OZSMPCHY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb https://doi.org/10.1101/gr.138545.112
+    \endverb
+    \field{pages}{377\bibrangedash 387}
+    \field{title}{SeqFold: Genome-scale reconstruction of RNA secondary
+  structure integrating high-throughput sequencing data}
+    \verb{url}
+    \verb https://github.com/Lattice-Automation/seqfold
+    \endverb
+    \field{volume}{23}
+    \field{journaltitle}{Genome Research}
+    \field{year}{2013}
+  \endentry
+
+  \entry{viennarna}{article}{}
+    \name{author}{7}{}{%
+      {{hash=LR}{%
+         family={Lorenz},
+         familyi={L\bibinitperiod},
+         given={Ronny},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HIL}{%
+         family={Hofacker},
+         familyi={H\bibinitperiod},
+         given={Ivo\bibnamedelima L.},
+         giveni={I\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=SPF}{%
+         family={Stadler},
+         familyi={S\bibinitperiod},
+         given={Peter\bibnamedelima F.},
+         giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=FC}{%
+         family={Flamm},
+         familyi={F\bibinitperiod},
+         given={Christoph},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=TH}{%
+         family={Tafer},
+         familyi={T\bibinitperiod},
+         given={Hakim},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=zSCH}{%
+         prefix={zu},
+         prefixi={z\bibinitperiod},
+         family={Siederdissen},
+         familyi={S\bibinitperiod},
+         given={Christian\bibnamedelima Höner},
+         giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=BSH}{%
+         family={Bernhart},
+         familyi={B\bibinitperiod},
+         given={Stephan\bibnamedelima H.},
+         giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LRHILSPF+1}
+    \strng{fullhash}{LRHILSPFFCTHSCHzBSH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb https://doi.org/10.1186/1748-7188-6-26
+    \endverb
+    \field{title}{ViennaRNA Package 2.0}
+    \verb{url}
+    \verb https://viennarna.readthedocs.io/en/latest/
+    \endverb
+    \field{volume}{6}
+    \field{journaltitle}{Algorithms for Molecular Biology}
+    \field{year}{2011}
+  \endentry
+
+  \entry{bonilla}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CA}{%
+         family={Carpio},
+         familyi={C\bibinitperiod},
+         given={Ana},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BLL}{%
+         family={Bonilla},
+         familyi={B\bibinitperiod},
+         given={Luis\bibnamedelima L.},
+         giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Prados},
+         familyi={P\bibinitperiod},
+         given={Antonio},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CABLLPA1}
+    \strng{fullhash}{CABLLPA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb https://doi.org/10.1103/PhysRevE.91.052712
+    \endverb
+    \field{title}{Theory of force-extension curves for modular proteins and DNA
+  hairpins}
+    \field{volume}{91}
+    \field{journaltitle}{Physical Review E}
+    \field{year}{2015}
   \endentry
 \enddatalist
 \endinput

@@ -1,0 +1,19 @@
+{
+    "assembly_name": "GRCh38",
+    "db_type": "core",
+    "object_type": "Transcript",
+    "source": "havana_tagene",
+    "seq_region_name": "16",
+    "logic_name": "havana_tagene_homo_sapiens",
+    "id": "ENST00000662104",
+    "version": 1,
+    "strand": -1,
+    "start": 976084,
+    "is_canonical": 0,
+    "end": 979648,
+    "species": "homo_sapiens",
+    "display_name": "CEROX1-210",
+    "Parent": "ENSG00000260807",
+    "length": 1307,
+    "biotype": "lncRNA"
+}

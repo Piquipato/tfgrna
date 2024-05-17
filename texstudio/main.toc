@@ -1,34 +1,36 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {spanish}{}\relax 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Abstract}{4}{section.1}%
+\contentsline {section}{\numberline {1}Abstract}{2}{section.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Introducción}{5}{section.2}%
+\contentsline {section}{\numberline {2}Fundamento Teórico}{2}{section.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Fundamento Teórico}{6}{section.3}%
+\contentsline {subsection}{\numberline {2.1}Polímeros en las Células}{2}{subsection.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Polímeros en las Células}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {2.2}Estructura del ARN}{3}{subsection.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Estructura del ARN}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {2.3}Predicción de la Estructura Secundaria del ARN}{4}{subsection.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Predicción de la Estructura Secundaria del ARN}{7}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Modelos de Programación Dinámica}{4}{subsubsection.2.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.1}Modelos de Programación Dinámica}{8}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Otros Modelos}{5}{subsubsection.2.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.2}Otros Modelos}{8}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {2.4}Modelos Random Walk}{6}{subsection.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Modelos Random Walk}{9}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Modelo Freely Jointed Chain del ADN}{6}{subsubsection.2.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.1}Modelo Freely Jointed Chain del ADN}{9}{subsubsection.3.4.1}%
+\contentsline {section}{\numberline {3}Materiales y Métodos}{7}{section.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Materiales y Métodos}{10}{section.4}%
+\contentsline {subsection}{\numberline {3.1}Simulación del ARN con el Modelo Freely Jointed Chain}{7}{subsection.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Simulación en Python}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {3.2}Promedios Modelo Freely Jointed Chain}{8}{subsection.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Otros Programas}{10}{subsection.4.2}%
+\contentsline {subsection}{\numberline {3.3}Otros Programas}{8}{subsection.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Resultados}{11}{section.5}%
+\contentsline {section}{\numberline {4}Resultados}{8}{section.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Conclusión}{12}{section.6}%
+\contentsline {section}{\numberline {5}Discusión}{10}{section.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Referencias}{13}{section.7}%
+\contentsline {section}{\numberline {6}Bibliografía}{13}{section.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Apéndice I: Gráficas de los Transcritos}{14}{section.7}%

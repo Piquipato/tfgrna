@@ -1,0 +1,19 @@
+{
+    "length": 1356,
+    "is_canonical": 0,
+    "logic_name": "havana_homo_sapiens",
+    "id": "ENST00000575207",
+    "Parent": "ENSG00000141252",
+    "assembly_name": "GRCh38",
+    "display_name": "VPS53-218",
+    "strand": -1,
+    "seq_region_name": "17",
+    "species": "homo_sapiens",
+    "source": "havana",
+    "object_type": "Transcript",
+    "start": 655838,
+    "end": 714791,
+    "db_type": "core",
+    "version": 6,
+    "biotype": "nonsense_mediated_decay"
+}
