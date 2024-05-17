@@ -219,11 +219,11 @@ El estudio de la estructura secundaria del ARN ofrece la posibilidad de una mejo
 
 \begin{wrapfigure}{r}{0.5\textwidth}
     \begin{center}
-      \includegraphics[width=0.35\textwidth]{adn.png}
+      \includegraphics[width=0.35\textwidth]{images/adn.png}
     \end{center}
     \caption{Cadena de ADN.}
     \label{fig:adnchain}
-  \end{wrapfigure}
+\end{wrapfigure}
 
 Según el dogma central de la biología molecular, la información genética dentro de cualquier célula se transmite del ADN al ARN, por medio de la transcripción, y de este último se traduce a proteína, que es la molécula que en última instancia la célula usa para realizar una acción dada\cite{alberts}.
 
@@ -231,30 +231,54 @@ Por lo tanto, para el buen funcionamiento de cualquier célula viva, es necesari
 
 
 \begin{enumerate}
-    \item El ADN, molécula con dos cadenas en forma de doble hélice, que codifica las instrucciones genéticas necesarias para el buen funcionamiento de la maquinaria molecular de la célula. El ADN está compuesto por monómeros llamados nucleótidos, compuestos a su vez por bases nitrogenadas (A, T, C, G) complementarias dos a dos mediante enlaces de hidrógeno, y por una pentosa adherida a un grupo fosfáto. La cadenas de nucleótidos, i.e., las hélices, se mantienen unidas por enlaces covalentes entre las pentosas fosfato, y por su estructura complementaria la célula es capaz de replicar las cadenas de nucleótidos con facilidad.
+    \item El ADN, molécula con dos cadenas en forma de doble hélice, que codifica las instrucciones genéticas necesarias para el buen funcionamiento de la maquinaria molecular de la célula. El ADN está compuesto por monómeros llamados nucleótidos, compuestos a su vez por bases nitrogenadas (A, T, C, G) complementarias dos a dos mediante enlaces de hidrógeno (A$=$T, C$\equiv$G), y por una desoxiribosa adherida a un grupo fosfáto. La cadenas de nucleótidos, i.e., las hélices, se mantienen unidas por enlaces covalentes entre los grupos fosfatos adheridos a las desoxiribosas, y por su estructura complementaria la célula es capaz de replicar las cadenas de nucleótidos con facilidad.
     \item Las proteínas, que son las moléculas constituidas por monómeros llamados aminoácidos, que la célula usa tanto de manera estructural como para realizar una acción dada, a modo de catalizador en reacciones químicas (enzimas).
-    \item El ARN, similar al ADN en su estructura en el hecho de que también esta compuesta por ácidos nucleicos (A, U, C, G), aunque en el ARN se sustituye a la timina (T) por uracilo (U). También difiere al ADN en que no suelen encontrarse dos cadenas de ARN enlazadas entre sí, encontrándose en su lugar en cadenas simples. Es interesante destacar que cada vez se descubren más casos para los que la célula utiliza el ARN, siendo también útil, por ejemplo, en reacciones catalíticas (ribozimas). En general, se clasifican las moléculas de ARN por función, por tamaño y por el lugar en el que se encuentran dentro de la célula (mRNA, tRNA, rRNA, miRNA).
+    \item El ARN, similar al ADN en su estructura en el hecho de que también esta compuesta por ácidos nucleicos (A, U, C, G), aunque en el ARN se sustituye a la timina (T) por uracilo (U). También difiere al ADN en que las hélices en lugar de estar formadas por desoxiribosas, están formadas por ribosas. Además, el ARN no suele encontrarse enlazado a otra cadena complementaria, encontrándose en su lugar en cadenas simples. Es interesante destacar que cada vez se descubren más casos para los que la célula utiliza el ARN, siendo también útil, por ejemplo, en reacciones catalíticas (ribozimas). En general, se clasifican las moléculas de ARN por función, por tamaño y por el lugar en el que se encuentran dentro de la célula (mRNA, tRNA, rRNA, miRNA).
 \end{enumerate}
 
 
 \subsection{Estructura del ARN}\label{subsec:arn}
 
-Como he comentado previamente, en este estudio, me enfoco principalmente en la estructura que adopta la molécula de ARN, que al no estar enlazada a otra cadena complementaria, como pasa con el ADN, se dobla sobre si misma debido a la interacción que sufren entre sí los ácidos nucleicos que la componen. Cabe discutir, en este caso, la estructura que tiene el ARN y como tratar de predecir la conformación que dicha molécula va a tomar.
+Como he comentado previamente, este estudio está enfocado a estudiar y predecir la estructura que adopa la molécula de ARN, que difiere a la del ADN al estar compuesta esta molécula por una sola hélice en lugar de dos, lo que permite al ARN doblarse sobre sí mismo, y a sus nucleotidos enlazarse entre sí.
 
-Cabe mencionar que la exposición teórica expuesta en esta sección se basa en el trabajo realizado por Paul G. Higgs (2000) \cite{phiggs}, quién aglutinó en la revisión citada los diferentes modelos de predicción de estructura del ARN.
+Cabe mencionar que la exposición teórica expuesta en esta sección se basa en el trabajo realizado por Paul G. Higgs (2000) \cite{phiggs}, quién aglutinó en la revisión citada los diferentes modelos de predicción de estructura del ARN. Los modelos que usaré de contraste con el modelo Random Walk están basados en los explicados en su trabajo.
 
-El ARN esta compuesto, por cuatro ácidos nucleicos (adenina, citosina, guanina, uracilo), conectados por una cadena de ribosas, unidas entre sí por fosfatos. Es esta la principal diferencia que la estructura del ARN encuentra con la estructura del ADN, cuya cadena principal esta formada por desoxiribosas, perdiendo un átomo de oxígeno respecto a la ribosa. La otra gran diferencia que encontramos entre el ADN y el ARN es en los ácidos nucleicos que usan, principalmente en que el ADN hace uso de la timina (T) y el ARN, en cambio, hace uso del uracilo (U), aunque ambas moléculas enlazan con la adenina por medio de un enlace de hidrógeno. Cabe mencionar también que el uracilo puede enlazarse también a la guanina, cosa que con la timina no pasa y habrá que tener en cuenta más adelante.
+El ARN esta compuesto, por cuatro ácidos nucleicos (adenina, citosina, guanina, uracilo), complementarios dos a dos (A$=$U, C$\equiv$G), como en el ADN. Cabe mencionar también que el uracilo puede enlazarse también a la guanina (U$=$G), cosa que habrá que tener en cuenta más adelante.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/RNA_base_pairs.png}
+    \caption{Pares de bases complementarias del ARN.}
+    \label{fig:RNA_base_pairs}
+\end{figure}
+
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+    \begin{center}
+      \includegraphics[width=0.18\textwidth]{images/RNA_chemical_structure.png}
+    \end{center}
+    \caption{Estructura química del ARN.}
+    \label{fig:arnchain}
+\end{wrapfigure}
 
 Tanto para la cadena de ADN como para la de ARN se pueden definir direcciones en función de los átomos a los que se enlazan las ribosas y las desoxiribosas, también conocidas como pentosas. Se denomina al extremo de la cadena en la que el tercer carbono de las pentosas queda sin enlazar extremo 3' de la cadena. Por analogía, al extremo contrario, en el que el quinto carbono de las pentosas queda sin enlazar se le denomina extremo 5'.
 
 En lo que a la estructura tridimensional que el ARN presenta, se puede estudiar en varias partes, a diferencia de las proteínas:
 
 \begin{itemize}
-    \item La estructura secundaria del ARN se refiere a los enlaces que los diferentes nucleótidos de la cadena presentan entre sí, y como esos enlaces fuerzan a la cadena a doblarse sobre sí misma. Al igual que el ADN, el ARN al doblarse sobre sí mismo forma estructuras en forma de hélice cuando dos segmentos complementarios de la cadena se enlazan. Principalmente, la estructura secundaria se describe encontrando las hélices que se forman y las secciones de nucleótidos desemparejadas que no forman hélices (hairpins, loops...).
+    \item La estructura primaria del ARN es la estructura lineal de la molécula, i.e., la secuencia de nucleótidos que componen a la molécula.
+    \item La estructura secundaria del ARN se refiere a los enlaces que los diferentes nucleótidos de la cadena presentan entre sí, y como esos enlaces fuerzan a la cadena a doblarse sobre sí misma. El ARN al doblarse sobre sí mismo forma estructuras en forma de hélice cuando dos segmentos complementarios de la cadena se enlazan, como las que se forman en el ADN. Principalmente, la estructura secundaria se describe prediciendo las hélices que se forman y las secciones de nucleótidos desemparejadas que no forman hélices (hairpins, loops, juntions...).
     \item La estructura terciaria del ARN se refiere a interacciones menos relevantes entre los elementos de la cadena de ARN, como pueden ser interacciones entre tres nucleótidos, en lugar de solo dos; interacciones entre un nucleótido y la cadena de ribosas o interacciones entre secciones complementarias de nucleótidos desemparejados.
 \end{itemize}
 
-El principal objetivo de cualquier modelo computacional dedicado a predecir la estructura tridimensional del ARN es predecir correctamente su estructura secundaria, bajo la suposición de que la estructura terciaria se forma tras la conformación de la estructura secundaria, por ser interacciones con menos probabilidad de ocurrir y menos estables. A continuación expongo los diferentes modelos computacionales que existen para encontrar dicha estructura.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\textwidth]{images/RNA_secondary_structure.png}
+    \caption{Motivos de la estructura secundaria del ARN.}
+    \label{fig:RNA_secondary_structure}
+\end{figure}
+
+El principal objetivo de cualquier modelo computacional dedicado a predecir la estructura tridimensional del ARN es predecir correctamente su estructura secundaria, bajo la suposición de que la estructura terciaria se forma tras la conformación de la estructura secundaria, por ser interacciones con menos probabilidad de ocurrir y menos estables. A continuación expongo los diferentes modelos computacionales que existen para predecir dicha estructura.
 
 \subsection{Predicción de la Estructura Secundaria del ARN}\label{subsubsec:thbasis}
 
@@ -262,7 +286,7 @@ La mayoría de modelos computacionales tratan de encontrar la estructura del ARN
 
 \begin{itemize}
     \item Un par de bases complementarias $i$ y $j$ ha de estar al menos a cuatro nucleótidos de distancia, $\abs{i-j} \leq 4$, por ser la cadena demasiado rígida para permitir enlaces entre nucleótidos más próximos entre sí.
-    \item Dadas dos parejas de bases complementarias $i-j$ y $k-l$, tomamos las parejas como compatibles, i.e., que permitimos que ambas formen parte de la estructura a predecir, sí son solapan o una esta contenida dentro de la otra ($i<j<k<l$ o $i<k<l<j$). Descartamos aquellas parejas que no cumplan estas condiciones ($i<k<j<l$, enlaces intercalados), que corresponderían a interacciones de la estructura terciaria entre segmentos lejanos de la cadena, comentados en la sección anterior.
+    \item Dadas dos parejas de bases complementarias $i-j$ y $k-l$, tomamos las parejas como compatibles, i.e., que permitimos que ambas formen parte de la estructura a predecir, sí son solapan o una esta contenida dentro de la otra ($i<j<k<l$ o $i<k<l<j$). Descartamos aquellas parejas que no cumplan estas condiciones ($i<k<j<l$, pseudonudos), que corresponderían a interacciones de la estructura terciaria entre segmentos lejanos de la cadena, comentados en la sección anterior.
     \item La energía libre de un nucleótido libre es mayor que la energía libre de un nucleotido enlazado. Por lo tanto, suponemos que la molécula de ARN tenderá en todo caso a doblarse sobre sí misma para enlazar la mayor cantidad de pares de nucleotidos que le sea posible.
 \end{itemize}
 
@@ -286,15 +310,22 @@ Si la base $j$ resulta no estar enlazada con ningún nucleotido, se puede intuir
 
 Partiendo de la \er[ecuación]{eq:mimimum}, con un algoritmo de recursión que vaya descomponiendo el segmento a considerar en segmentos más pequeños y vaya encontrando para esos segmentos más pequeños sus energías mínimas, se puede encontrar la energía mínima de la cadena $E_{1N}$, así como la conformación de la cadena de ARN que la minimiza.
 
-Lo que todos los modelos de programación dinámica tienen en común es el procedimiento recursivo aquí expuesto. Las diferencias entre ellos son los parámetros termodinámicos que se tienen en cuenta en los modelos, como sería en el caso del modelo expuesto $\epsilon_{ij}$. Estos parámetros se pueden ajustar para reflejar mejor los resultados obtenidos en experimentos termodinámicos realizados con cadenas de ARN. 
+Así mismo, se puede calcular la función de partición del segmento $Z_{ij}$, así como la probabilidad de que dos nucleótidos dados estén enlazados dentro del segmento, $p_{ij}$, utilizando el método recursivo, tal que,
 
-Cabe destacar que la energía del modelo (medida en $u.a.$ del programa), $E_{1N}$, no es la energía libre de la cadena, sino la energía total de la misma, relacionadas mediante la entropía de la cadena de acuerdo a $G = U + TS$. Lo que nos indica este hecho realmente es que a la hora de minimizar la energía libre de la cadena, hay que tener en cuenta a que temperatura a la que hacemos la aproximación. La entropía se puede calcular fácilmente partiendo de la tabla de probabilidades de cada enlace, con la expresión de la entropía de Shannon
+\begin{gather}\label{eq:proba}
+    Z_{ij} = Z_{i,j-1} + \sum_{l=i}^{j-4} \p{Z_{i,l-1} Z_{l+1,j-1} \exp{\p{-\frac{\epsilon_{lj}}{kT}}}} \\
+    p_{ij} = \frac{Z_{1,i-1}Z_{j+1,N} \exp{\p{-\frac{\epsilon_{ij}}{kT}}}}{Z_{1N}}
+\end{gather}
 
-\begin{equation}
-    S_i = - \sum_{i, j} p_{ij} \log{p_{ij}}
-\end{equation}
+Lo que todos los modelos de programación dinámica tienen en común es el procedimiento recursivo aquí expuesto. Las diferencias entre ellos son los parámetros termodinámicos que se tienen en cuenta en los modelos, como sería en el caso del modelo expuesto $\epsilon_{ij}$. Estos parámetros se pueden ajustar para reflejar mejor los resultados obtenidos en experimentos termodinámicos realizados con cadenas de ARN.
 
-Usaré en este trabajo estos modelos como referencia para comparar los resultados obtenidos con el modelo Random Walk con los obtenidos con programación dinámica.
+%Cabe destacar que la energía del modelo (medida en unidades arbitrarias del programa), $E_{1N}$, no es la energía libre de la cadena, $G$, sino la energía total de la misma, $U$, relacionadas mediante la entropía de la cadena de acuerdo a $G = U + TS$. Lo que nos indica este hecho realmente es que a la hora de minimizar la energía libre de la cadena, hay que tener en cuenta a que temperatura a la que hacemos la aproximación. La entropía se puede calcular fácilmente partiendo de la tabla de probabilidades de cada enlace, 
+
+%\begin{equation}
+%    S = - \sum_{i, j} p_{ij} \log{p_{ij}}
+%\end{equation}
+
+Usaré en este trabajo los modelos de programación dinámica como referencia para comparar los resultados obtenidos con el modelo Random Walk.
 
 \subsubsection{Otros Modelos}\label{subsubsec:others}
 
@@ -376,11 +407,11 @@ Empezando en el origen, se calcula la posición inicial de cada segmento, $\vec{
 
 Tras calcular la posición de cada nucleotido de la cadena, $\vec{x}_{ki}$, se calculan las potenciales parejas complementarias de nucleotidos en la cadena (siempre y cuando esten a una distancia mayor a $\xi_p$), y si la distancia entre los nucleotidos considerados, $d = \norm{\vec{x}_{k_1i_1} - \vec{x}_{k_2i_2}}$ es menor a $n_t$, se anota la pareja de nucleotidos como enlazados.
 
-Nótese que con este modelo, se admiten los enlaces intercalados mencionados en la \nr[sección]{subsubsec:thbasis}.
+Nótese que con este modelo, se admiten los pseudonudos mencionados en la \nr[sección]{subsubsec:thbasis}.
 
 \subsection{Promedios Modelo Freely Jointed Chain}\label{subsec:means}
 
-El método expuesto en la anterior \nr[sección]{subsec:python} tiene un inconveniente: solo está calculando una conformación aleatoria de las múltiples que pueden ocurrir. Sin embargo, si se repiten múltiples veces las simulaciones descritas, podemos construir una matriz de probabilidades $p_{ij}$, que nos de información sobre la conformación de la cadena más estable, que a efectos de este trabajo vamos a asumir que es la más estable. Esta aproximación será más fiable cuantas más simulaciones hagamos para una misma cadena.
+El método expuesto en la anterior \nr[sección]{subsec:python} tiene un inconveniente: solo está calculando una conformación aleatoria de las múltiples que pueden ocurrir. Sin embargo, si se repiten múltiples veces las simulaciones descritas, podemos construir una matriz de probabilidades $p_{ij}$, que nos de información sobre la conformación de la cadena más probable, que a efectos de este trabajo vamos a asumir que es la más estable. Esta aproximación será más fiable cuantas más simulaciones hagamos para una misma cadena.
 
 Con la matriz de probabilidad, tal y como se describe en el trabajo de Paul G. Higgs (2000) \cite{phiggs}, podemos determinar la estructura más probable. Gracias al trabajo de I. L. Hofacker, et.al. (1994) \cite{hofacker}, podemos usar el paquete ViennaRNA en python para realizar este cálculo.
 
@@ -389,8 +420,8 @@ Con la matriz de probabilidad, tal y como se describe en el trabajo de Paul G. H
 Para validar la capacidad de predicción de la estructura del ARN del modelo Random Walk, voy a hacer uso de dos programas adicionales, implementados también en Python:
 
 \begin{itemize}
-    \item \textit{SeqFold}\cite{seqfold}: Implementación de un algoritmo de programación dinámica, como los descritos en la \nr[sección]{subsubsec:dynamic}, con parámetros termodinámicos ajustados.
-    \item \textit{ViennaRNA RNAFold}\cite{viennarna}: Paquete desarrollado a raíz del trabajo de  I. L. Hofacker, et.al. (1994) \cite{hofacker}, mencionado en la \nr[sección]{subsec:means}. Introduce la notación \verb|dot_bracket|, en la que los pares de bases enlazadas se representan en una cadena de texto con \verb|'()'| y las bases libres se representan con \verb|'.'|. Usaré extensivamente esta notación en la \nr[sección]{sec:res}
+    \item \textit{SeqFold} \cite{seqfold}: Implementación de un algoritmo de programación dinámica, como los descritos en la \nr[sección]{subsubsec:dynamic}, con parámetros termodinámicos ajustados.
+    \item \textit{ViennaRNA RNAFold} \cite{viennarna}: Paquete desarrollado a raíz del trabajo de  I. L. Hofacker, et.al. (1994) \cite{hofacker}, mencionado en la \nr[sección]{subsec:means}. Introduce la notación \verb|dot_bracket|, en la que los pares de bases enlazadas se representan en una cadena de texto con \verb|'()'| y las bases libres se representan con \verb|'.'|. Usaré extensivamente esta notación en la \nr[sección]{sec:res}
 \end{itemize}
 
 Para comparar, calcularé el diagrama \verb|dot_bracket| de cada uno de los modelos, así como el porcentaje de nucleotidos enlazados, que recordemos que está vinculado con la enegía libre de la conformación de la cadena.

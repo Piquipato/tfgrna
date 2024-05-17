@@ -11,9 +11,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3}Predicción de la Estructura Secundaria del ARN}{4}{subsection.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.3.1}Modelos de Programación Dinámica}{4}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.1}Modelos de Programación Dinámica}{5}{subsubsection.2.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.3.2}Otros Modelos}{5}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2}Otros Modelos}{6}{subsubsection.2.3.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4}Modelos Random Walk}{6}{subsection.2.4}%
 \defcounter {refsection}{0}\relax 
@@ -25,11 +25,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2}Promedios Modelo Freely Jointed Chain}{8}{subsection.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Otros Programas}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.3}Otros Programas}{9}{subsection.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Resultados}{8}{section.4}%
+\contentsline {section}{\numberline {4}Resultados}{9}{section.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Discusión}{10}{section.5}%
+\contentsline {section}{\numberline {5}Discusión}{11}{section.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}Bibliografía}{13}{section.6}%
 \defcounter {refsection}{0}\relax 
