@@ -285,7 +285,7 @@ El principal objetivo de cualquier modelo computacional dedicado a predecir la e
 La mayoría de modelos computacionales tratan de encontrar la estructura del ARN que minimice la energía libre de la molécula. Para ello, se parte de unas reglas básicas: suponiendo que la cadena esta formada por $N$ nucleótidos:
 
 \begin{itemize}
-    \item Un par de bases complementarias $i$ y $j$ ha de estar al menos a cuatro nucleótidos de distancia, $\abs{i-j} \leq 4$, por ser la cadena demasiado rígida para permitir enlaces entre nucleótidos más próximos entre sí.
+    \item Un par de bases complementarias $i$ y $j$ ha de estar al menos a cuatro nucleótidos de distancia, $\abs{i-j} \geq 4$, por ser la cadena demasiado rígida para permitir enlaces entre nucleótidos más próximos entre sí.
     \item Dadas dos parejas de bases complementarias $i-j$ y $k-l$, tomamos las parejas como compatibles, i.e., que permitimos que ambas formen parte de la estructura a predecir, sí son solapan o una esta contenida dentro de la otra ($i<j<k<l$ o $i<k<l<j$). Descartamos aquellas parejas que no cumplan estas condiciones ($i<k<j<l$, pseudonudos), que corresponderían a interacciones de la estructura terciaria entre segmentos lejanos de la cadena, comentados en la sección anterior.
     \item La energía libre de un nucleótido libre es mayor que la energía libre de un nucleotido enlazado. Por lo tanto, suponemos que la molécula de ARN tenderá en todo caso a doblarse sobre sí misma para enlazar la mayor cantidad de pares de nucleotidos que le sea posible.
 \end{itemize}
@@ -296,7 +296,7 @@ Con estas reglas básicas se desarrollan los modelos a explicados continuación.
 
 Los modelos más comunes con diferencia son los de programación dinámica. Estos modelos se basan en la recursión para optimizar la rapidez con la que encuentran estructuras candidatas a ser la más estable, en un tiempo que escala de acuerdo a $O(N^3)$.
 
-El modelo más simple de esta categoría es el descrito por R. Nussinov, et. al. (1980) \cite{nussinov}. Asignamos una energía $\epsilon_{ij} = -1$ a cada par de bases enlazadas y, en caso de no estar enlazadas, asignamos una energía a la base de $\epsilon_{ij} = +\infty$, siendo $\epsilon_{ij}$ la enegía de un par de bases dado. Se pretende obtener la enegía mínima del segmento entre dos bases dadas $E_{ij}$. Supóngase que la última base, $j$, esta enlazada con una base $i < k < j$. Podemos descomponer la energía $E_{ij}$ tal que,
+El modelo más simple de esta categoría es el descrito por R. Nussinov, et. al. (1980) \cite{nussinov}. Asignamos una energía $\epsilon_{ij} = -1$ $u.a.$ (unidades arbitrarias) a cada par de bases enlazadas y, en caso de no estar enlazadas, asignamos una energía a la base de $\epsilon_{ij} = +\infty$, siendo $\epsilon_{ij}$ la enegía de un par de bases dado. Se pretende obtener la enegía mínima del segmento entre dos bases dadas $E_{ij}$. Supóngase que la última base, $j$, esta enlazada con una base $i < k < j$. Podemos descomponer la energía $E_{ij}$ tal que,
 
 \begin{equation}\label{eq:recurrence}
     E_{ij} = E_{i,k-1} + E_{k+1, j-1} + \epsilon_{kj}
@@ -305,7 +305,7 @@ El modelo más simple de esta categoría es el descrito por R. Nussinov, et. al.
 Si la base $j$ resulta no estar enlazada con ningún nucleotido, se puede intuir de la \er[ecuación]{eq:recurrence} que $E_{ij} = E_{i,j-1}$. Partiendo de esta ecuación, se puede encontrar la energía mínima del segmento, que corresponderá con la del enlace que lo minimice, siendo esta
 
 \begin{equation}\label{eq:mimimum}
-    E_{ij} = \min\p{E_{i,j-1}, \min_{i \leq k \leq j-4}\p{E_{i,k-1} + E_{k+1, j-1} + \epsilon_{kj}}}
+    \resizebox{0.45\textwidth}{!}{$E_{ij} = \min\p{E_{i,j-1}, \min_{i \leq k \leq j-4}\p{E_{i,k-1} + E_{k+1, j-1} + \epsilon_{kj}}}$}
 \end{equation}
 
 Partiendo de la \er[ecuación]{eq:mimimum}, con un algoritmo de recursión que vaya descomponiendo el segmento a considerar en segmentos más pequeños y vaya encontrando para esos segmentos más pequeños sus energías mínimas, se puede encontrar la energía mínima de la cadena $E_{1N}$, así como la conformación de la cadena de ARN que la minimiza.
@@ -374,6 +374,7 @@ Podemos extender la distribución obtenida al caso tridimensional teniendo en cu
     p\p{\vec{R}, N} = \p{\frac{3}{2 \pi N a^2}}^{\frac{3}{2}} e^{-\frac{3R^2}{2 N a^2}}
 \end{equation}
 
+\newpage
 % -- MAT&METH -- %
 \section{Materiales y Métodos}\label{sec:mym}
 
@@ -386,7 +387,7 @@ La simulación que he programado en Python requiere de tres parámetros:
 \begin{itemize}
     \item La secuencia de la cadena de ARN para la que se pretende encontrar la conformación tridimensional.
     \item La longitud de un nucleotido en nanómetros, \verb|nt|, cuyo valor por defecto es $n_t = 0.34$ $nm$.
-    \item La longitud de persistencia de la cadena, i.e., la longitud de cadena que se puede tomar como rígida. El valor por defecto es $\xi_p = 1.5$ \verb|nt|, reflejando en un hairpin tiene que haber al menos tres nucleotidos libres \cite{phiggs}.
+    \item La longitud de persistencia de la cadena, i.e., la longitud de cadena que se puede tomar como rígida. El valor por defecto es $\xi_p = 1.5$ \verb|nt|, reflejando que en un hairpin tiene que haber al menos tres nucleotidos libres \cite{phiggs}, i.e., $\abs{i-j} \geq 4$.
 \end{itemize}
 
 El resultado que busca el programa es una conformación aleatoria en el espacio de la cadena de ARN que se esté estudiando. Para ello, el programa sigue una serie de pasos.
@@ -399,6 +400,14 @@ A continuación se le asigna a cada segmento una dirección aleatoria en el espa
     \vec{s}_i\p{\theta_i, \phi_i} = 2 \xi_p \p{\sin{\theta_i}\cos{\phi_i} \hat{i} + \sin{\theta_i}\sin{\phi_i} \hat{j} + \cos{\theta_i} \hat{k}}
 \end{equation}
 
+\begin{wrapfigure}{l}{0.33\textwidth}
+    \begin{center}
+      \includegraphics[width=0.3\textwidth]{images/RNA_random_dir.png}
+    \end{center}
+    \caption{Direcciones aleatorias de los segmentos de ARN.}
+    \label{fig:RNA_random_dir}
+\end{wrapfigure}
+
 Empezando en el origen, se calcula la posición inicial de cada segmento, $\vec{X}_{i,0}$. Después, para cada nucleotido, se calcula la posición del mismo, usando las direcciones en las que apunta cada uno de los segmentos, $\vec{s}_i$, tras concatenarlos, de la siguiente manera.
 
 \begin{equation}\label{eq:nuclpos}
@@ -407,13 +416,14 @@ Empezando en el origen, se calcula la posición inicial de cada segmento, $\vec{
 
 Tras calcular la posición de cada nucleotido de la cadena, $\vec{x}_{ki}$, se calculan las potenciales parejas complementarias de nucleotidos en la cadena (siempre y cuando esten a una distancia mayor a $\xi_p$), y si la distancia entre los nucleotidos considerados, $d = \norm{\vec{x}_{k_1i_1} - \vec{x}_{k_2i_2}}$ es menor a $n_t$, se anota la pareja de nucleotidos como enlazados.
 
-Nótese que con este modelo, se admiten los pseudonudos mencionados en la \nr[sección]{subsubsec:thbasis}.
+Nótese que con este modelo se admiten los pseudonudos mencionados en la \nr[sección]{subsubsec:thbasis}, al no estar restringidos los enlaces por las reglas mencionadas en la misma sección.
 
 \subsection{Promedios Modelo Freely Jointed Chain}\label{subsec:means}
 
 El método expuesto en la anterior \nr[sección]{subsec:python} tiene un inconveniente: solo está calculando una conformación aleatoria de las múltiples que pueden ocurrir. Sin embargo, si se repiten múltiples veces las simulaciones descritas, podemos construir una matriz de probabilidades $p_{ij}$, que nos de información sobre la conformación de la cadena más probable, que a efectos de este trabajo vamos a asumir que es la más estable. Esta aproximación será más fiable cuantas más simulaciones hagamos para una misma cadena.
 
-Con la matriz de probabilidad, tal y como se describe en el trabajo de Paul G. Higgs (2000) \cite{phiggs}, podemos determinar la estructura más probable. Gracias al trabajo de I. L. Hofacker, et.al. (1994) \cite{hofacker}, podemos usar el paquete ViennaRNA en python para realizar este cálculo.
+Con la matriz de probabilidad, tal y como se describe en el trabajo de Paul G. Higgs (2000) \cite{phiggs}, podemos determinar la estructura más probable. Gracias al trabajo de I. L. Hofacker, et.al. (1994) \cite{hofacker}, podemos usar el paquete ViennaRNA en Python para calcular cual es la estructura que mayor probabilidad tiene de ser adoptada por una cadena dada, tras realizar múltiples simulaciones Random Walk para la misma cadena.
+
 
 \subsection{Otros Programas}\label{subsec:packages}
 
@@ -421,20 +431,24 @@ Para validar la capacidad de predicción de la estructura del ARN del modelo Ran
 
 \begin{itemize}
     \item \textit{SeqFold} \cite{seqfold}: Implementación de un algoritmo de programación dinámica, como los descritos en la \nr[sección]{subsubsec:dynamic}, con parámetros termodinámicos ajustados.
-    \item \textit{ViennaRNA RNAFold} \cite{viennarna}: Paquete desarrollado a raíz del trabajo de  I. L. Hofacker, et.al. (1994) \cite{hofacker}, mencionado en la \nr[sección]{subsec:means}. Introduce la notación \verb|dot_bracket|, en la que los pares de bases enlazadas se representan en una cadena de texto con \verb|'()'| y las bases libres se representan con \verb|'.'|. Usaré extensivamente esta notación en la \nr[sección]{sec:res}
+    \item \textit{ViennaRNA RNAFold} \cite{viennarna}: Paquete desarrollado a raíz del trabajo de  I. L. Hofacker, et.al. (1994) \cite{hofacker}, mencionado en la \nr[sección]{subsec:means}. Introduce la notación \verb|dot_bracket|, en la que los pares de bases enlazadas se representan en una cadena de texto con \verb|'()'| y las bases libres se representan con \verb|'.'|. Usa también un algoritmo de programación dinámica para predecir estructuras secundarias de cadenas de ARN.
 \end{itemize}
 
-Para comparar, calcularé el diagrama \verb|dot_bracket| de cada uno de los modelos, así como el porcentaje de nucleotidos enlazados, que recordemos que está vinculado con la enegía libre de la conformación de la cadena.
+Para comparar, calcularé el porcentaje de nucleotidos enlazados, que recordemos que está vinculado con la enegía libre de la conformación de la cadena, y nos dará una idea de si el modelo Random Walk realiza predicciones similares a los modelos aquí descritos, ya validados para esta tarea.
 
+\subsection{Conformaciones Aleatorias}\label{subsec:randomconf}
 
+Para contrastar, tanto los modelos ya validados que voy a usar, como los modelos Random Walk, calcularé también conformaciones aleatorias de la cadena, siguiendo las reglas de la \nr[sección]{subsubsec:thbasis}. Para ello, montaré una matriz de enlaces posibles $q_{ij}$, asignando $q_{ij} = 1$ si el par $i-j$ cumple las normas y es complementario y $q_{ij} = 0$ si no lo hace. De manera aleatoria tomaré elementos de la matriz, cuidando de no obtener pseudonudos, y calcularé una conformación aleatoria de la cadena dada, a modo de control.
+
+\newpage
 % -- RESULTADOS -- %
 \section{Resultados}\label{sec:res}
 
-Para validar el modelo Random Walk descrito en la \nr[sección]{subsec:rndwalk}, primero monté una cohorte de cinco transcritos, que busque en la base de datos de \href{https://www.ensembl.org/index.html}{Ensembl Genome Browser}. Con los programas descritos en la \nr[sección]{sec:mym}. 
+Para validar el modelo Random Walk descrito en la \nr[sección]{subsec:rndwalk}, primero monté una cohorte de cinco transcritos, que busque en la base de datos de \href{https://www.ensembl.org/index.html}{Ensembl Genome Browser}. %Con los programas descritos en la \nr[sección]{sec:mym}. 
 
 Limité la búsqueda a transcritos de menos de 2000 pares de bases, ya que el tiempo de ejecución de estos algoritmos es del orden de $O(N^3)$, un tiempo de ejecución bastante alto para un ordenador personal.
 
-Tras obtener una base de $\sim156000$ transcritos de genes de múltiples especies, escogí de manera aleatoria cinco genes dentro de la base de datos para montar la cohorte de validación del modelo. En la \nr[Tabla]{tab:transcripts} se muestran los metadatos obtenidos de los transcritos:
+Tras obtener una base de $\sim156000$ transcritos de genes de múltiples especies, escogí de manera aleatoria cinco transcritos dentro de la base de datos para montar la cohorte de validación del modelo. En la \nr[Tabla]{tab:transcripts} se muestran los metadatos obtenidos de los transcritos:
 
 \begin{table}[H]
 	\centering
@@ -443,13 +457,11 @@ Tras obtener una base de $\sim156000$ transcritos de genes de múltiples especie
 	    \toprule
         EnsemblID & Gen & Transcrito & Especie & Longitud ($bp.$) & Biotipo & SeqFold \\
 		\midrule
-        ENST00000662104 & CEROX1-210 & CEROX1 & Homo Sapiens & 1307 & lncRNA & no \\
-        ENST00000613346 & PCDH15-221 & PCDH15 & Homo Sapiens & 580
-        & Protein Coding  & yes \\
-        ENST00000575207 & VPS53-218 & VPS53 & Homo Sapiens & 1356
-        & Nonsense Mediated Decay & no \\
-        ENST00000506218 & MACROH2A1-208 & MACROH2A1 & Homo Sapiens & 758 & Retained Intron & yes \\
-        ENST00000217043 & R3HDML-201 & R3HDML & Homo Sapiens & 1323 & Protein Coding & no \\
+        ENST00000662104 & CEROX1-210 & CEROX1 & Homo Sapiens & 1307 & lncRNA & False \\
+        ENST00000613346 & PCDH15-221 & PCDH15 & Homo Sapiens & 580 & Protein Coding  & True \\
+        ENST00000575207 & VPS53-218 & VPS53 & Homo Sapiens & 1356 & Nonsense Mediated Decay & False \\
+        ENST00000506218 & MACROH2A1-208 & MACROH2A1 & Homo Sapiens & 758 & Retained Intron & True \\
+        ENST00000217043 & R3HDML-201 & R3HDML & Homo Sapiens & 1323 & Protein Coding & False \\
 		\bottomrule
 	\end{tabular}
     \end{adjustbox}
@@ -457,20 +469,25 @@ Tras obtener una base de $\sim156000$ transcritos de genes de múltiples especie
     \label{tab:transcripts}
 \end{table}
 
+La columna "Longitud" (medida en pares de bases, $bp.$) indica la longitud del transcrito estudiado. La columna "Biotipo" indica la función biológica del transcrito. La columna "SeqFold" indica si se pudo ejecutar el algoritmo de \textit{SeqFold} para dicho transcrito.
+
 Para cada transcrito en la \nr[Tabla]{tab:transcripts}, se obtuvieron las secuencias de los genes que los codifican, así como las secuencias de cada transcrito para realizar la simulación, mediante la API de Ensembl. Además, se hicieron las siguientes simulaciones, en base a los modelos explicados: 
 
 \begin{itemize}
     \item Simulación usando una conformación aleatoria del modelo Random Walk. Con esta simulación se obtiene una gráfica de la conformación espacial obtenida.
-    \item Simulación usando diez conformaciones aleatorias del modelo Random Walk y obteniendo los enlaces entre nucleotidos con ViennaRNA a partir de la matrix de probabilidad calculada. Con esta simulación, se obtiene la matriz de probabilidad entre nucleótidos, así como la conformación espacial de la última simulación realizada de las diez conformaciones calculadas.
+    \item Simulación usando diez conformaciones aleatorias del modelo Random Walk y obteniendo los enlaces entre nucleotidos con ViennaRNA a partir de la matriz de probabilidad calculada. Con esta simulación, se obtiene la matriz de probabilidad entre nucleótidos. Como referencia, guardé también la conformación espacial de la última simulación realizada de las diez conformaciones calculadas.
     \item Simulación usando el algoritmo de programación dinámica de \textit{ViennaRNA RNAFold}. Con esta simulación, se obtiene una gráfica de la estructura secundaria obtenida en el plano. 
-    \item Simulación usando el algoritmo de programación dinámica de \textit{SeqFold}. Nótese en la \nr[Tabla]{tab:transcripts} la columna "SeqFold". Durante la ejecución del programa, para los transcritos dados, \textit{SeqFold} devolvió errores de ejecución debido a un límite de memoria por recursión. Con esta simulación, se obtiene una gráfica de la estructura secundaria obtenida en el plano. 
+    \item Simulación usando el algoritmo de programación dinámica de \textit{SeqFold}. Nótese en la \nr[Tabla]{tab:transcripts} la columna "SeqFold". Durante la ejecución del programa para los transcritos dados \textit{SeqFold} devolvió errores de ejecución debido a un límite de memoria por recursión. Con esta simulación, se obtiene una gráfica de la estructura secundaria obtenida en el plano. 
+    \item Cálculo de una conformación aleatoria de la cadena estudiada, mediante el cuál se obtiene una gráfica de la estructura secundaria de la conformación calculada, conforme a lo explicado en la \nr[sección]{subsec:randomconf}.
 \end{itemize}
 
 %Además de obtener todos estos resultados, para cada modelo se obtuvo la conformación final, en notación \verb|dot_bracket|. 
 
-Las gráficas resultantes del análisis se podrán encontrar en el \nr[Apéndice I]{sec:graphs}.
+Como para cada transcrito se obtienen al menos seis figuras relevantes, he incluido las gráficas resultantes del análisis en el \nr[Apéndice I]{sec:graphs}.
 
-Para comparar los resultados obtenidos de cada modelo, utilizaré el número de enlaces encontrados en una conformación dada. Así mismo, calcularé, según el método de R. Nussinov, et. al. (1980) \cite{nussinov}, descrito en la \nr[sección]{subsubsec:dynamic}.
+Para comparar los resultados obtenidos de cada modelo, utilizaré el número de enlaces encontrados en una conformación dada. Así mismo, calcularé, según el método de R. Nussinov, et. al. (1980) \cite{nussinov}, descrito en la \nr[sección]{subsubsec:dynamic}, las energías de la cadena $E_{1N}$.
+
+Los resultados obtenidos se muestran en la \nr[Tabla]{tab:linking}:
 
 \begin{table}[H]
 	\centering
@@ -479,26 +496,31 @@ Para comparar los resultados obtenidos de cada modelo, utilizaré el número de 
 	    \toprule
         Transcrito & Longitud ($bp.$) & Simulación & Nucleótidos Enlazados & $E_{1N}$ ($u.a.$) \\
 		\midrule
-        \multirow{3}{*}{CEROX1-210} & \multirow{3}{*}{1307} & Una Conformación & 474 & -237 \\
+        \multirow{4}{*}{CEROX1-210} & \multirow{4}{*}{1307} & Una Conformación & 474 & -237 \\
         &  & Diez Conformaciones & 4 & -2 \\
+        &  & Conformación Aleatoria & 474 & -237 \\
         &  & ViennaRNA & 850 & -425 \\
         \midrule
-        \multirow{4}{*}{PCDH15-221} & \multirow{4}{*}{580} & Una Conformación & 218 & -109 \\
+        \multirow{5}{*}{PCDH15-221} & \multirow{5}{*}{580} & Una Conformación & 218 & -109 \\
         &  & Diez Conformaciones & 22 & -11 \\
+        &  & Conformación Aleatoria & 218 & -109 \\
         &  & ViennaRNA & 380 & -190 \\
         &  & SeqFold & 332 & -166 \\
         \midrule
-        \multirow{3}{*}{VPS53-218} & \multirow{3}{*}{1356} & Una Conformación & 474 & -237 \\
+        \multirow{4}{*}{VPS53-218} & \multirow{4}{*}{1356} & Una Conformación & 474 & -237 \\
         &  & Diez Conformaciones & 46 & -23 \\
+        &  & Conformación Aleatoria & 474 & -237 \\
         &  & ViennaRNA & 848 & -424 \\
         \midrule
-        \multirow{4}{*}{MACROH2A1-208} & \multirow{4}{*}{758} & Una Conformación & 226 & -113 \\
+        \multirow{5}{*}{MACROH2A1-208} & \multirow{5}{*}{758} & Una Conformación & 226 & -113 \\
         &  & Diez Conformaciones & 0 & 0 \\
+        &  & Conformación Aleatoria & 226 & -113 \\
         &  & ViennaRNA & 478 & -239 \\
         &  & SeqFold & 418 & -209 \\
         \midrule
-        \multirow{3}{*}{R3HDML-201} & \multirow{3}{*}{1323} & Una Conformación & 408 & -204 \\
+        \multirow{4}{*}{R3HDML-201} & \multirow{4}{*}{1323} & Una Conformación & 408 & -204 \\
         &  & Diez Conformaciones & 428 & -214 \\
+        &  & Conformación Aleatoria & 408 & -204 \\
         &  & ViennaRNA & 826 & -413 \\
 		\bottomrule
 	\end{tabular}
@@ -511,9 +533,9 @@ Nótese que se satisface la relación $E_{1N} = - n_{linked} / 2$, siendo $n_{li
 
 Aunque solo se trate de una medida orientativa, la energía de la cadena $E_{1N}$ ya ofrece mucha información. Nótese que las conformaciones aleatorias, en general, tienen una energía mayor, indicando que son menos estables que las conformaciones encontradas por ViennaRNA. Cabe esperar este resultado, dado que el algoritmo de programación dinámica está diseñado para minimizar la energía libre de la cadena.
 
-También es aparente a partir de la tabla que calcular varias conformaciones aleatorias de una cadena dada es contraproducente. Esto puede deberse a un bajo número de iteraciones, pero aún así, exceptuando el transcrito R3HDML-201, en los demás transcritos la bajada del número de nucleotidos enlazados entre una simulación y diez simulaciones es de alrededor del $90\%$.
+También es aparente a partir de la tabla que el calculo de las diez conformaciones aleatorias de una cadena dada es contraproducente. Esto puede deberse a un bajo número de iteraciones, pero aún así, exceptuando el transcrito R3HDML-201, en los demás transcritos la bajada del número de nucleotidos enlazados entre una simulación y diez simulaciones es de alrededor del $90\%$. 
 
-
+\newpage
 % -- CONCLUSIÓN -- %
 \section{Discusión}\label{sec:cnc}
 
@@ -521,12 +543,19 @@ En base a estos resultados, ¿qué se puede concluir sobre el modelo Random Walk
 
 \begin{itemize}
     \item Por un lado, no predice estructuras comunes que sabemos que en ARN se producen de manera empírica, como las hélices, los loops o los hairpins.
-    \item Tampoco tiene en cuenta la energía libre de la cadena. Al calcular conformaciones aleatorias, el modelo está limitado a producir, en general, conformaciones inestables o alejadas del equilibrio.
+    \item Tampoco tiene en cuenta la energía libre de la cadena. Al calcular conformaciones aleatorias, el modelo está limitado a producir, en general, conformaciones inestables o alejadas del equilibrio, porque no tiene en cuenta que son más probables los estados donde hay enlaces entre nucleótidos que los estados que no los tienen.
     \item Otro gran problema del modelo es que, al calcular conformaciones de manera aleatoria, en general los enlaces que encuentra suelen ser intercalados, enlaces que se dan con poca frecuencia en el ARN, y son más bien propios de su estructura terciaria, por ser más inestables.
     \item Cabe mencionar también que el modelo Random Walk no separa entre estructura secundaria y terciaria, haciendo aún más complejo e improbable que la conformación aleatoria que produzca se acerque a la empírica.
 \end{itemize}
 
-Estas conclusiones son más que evidentes al comparar la estructura predicha del modelo Random Walk, con las estructuras que predicen los modelos ViennaRNA y SeqFold, modelos ya ajustados a datos empíricos y validados. Queda claro que, en general, las conformaciones de mínima energía libre tienen mucha menos enegía que las calculadas. 
+Estas conclusiones son más que evidentes al comparar la estructura predicha del modelo Random Walk, con las estructuras que predicen los modelos ViennaRNA y SeqFold, modelos ya ajustados a datos empíricos y validados. Queda claro que, en general, las conformaciones calculadas mediante algoritmos de programación dinámica tienen estructuras más lógicas, con más enlaces y por lo tanto menor energía libre, lo que las hace más estables. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{images/RNA_conformations.png}
+    \caption{Ejemplo de conformaciones calculadas con los diferentes modelos del estudio.}
+    \label{fig:RNA_conformations}
+\end{figure}
 
 Sin embargo, a la vista de estos resultados cabe mencionar una serie de vías de mejora del modelo, que podrían acercarlo más a predecir correctamente estructuras reales.
 
@@ -569,35 +598,49 @@ Estas preguntas abren la puerta a diferentes vías de investigación muy interes
 
 \begin{figure}[H]
     \centering
-    \begin{minipage}[c]{0.45\textwidth}
+    \begin{minipage}[c]{0.31\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/CEROX1-210-db_one.png}
         \caption{Conformación 3D CEROX1-210, una iteración.}
         \label{fig:CEROX1-210-one}
     \end{minipage}
     \hfill
-    \begin{minipage}[c]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{images/CEROX1-210-db_vrna.png}
-        \caption{Conformación 2D CEROX1-210, ViennaRNA.}
-        \label{fig:CEROX1-210-vrna}
-    \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \begin{minipage}[c]{0.45\textwidth}
+    \begin{minipage}[c]{0.31\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/CEROX1-210-db_iter.png}
         \caption{Conformación 3D CEROX1-210, diez iteraciones.}
         \label{fig:CEROX1-210-multi}
     \end{minipage}
     \hfill
-    \begin{minipage}[c]{0.45\textwidth}
+    \begin{minipage}[c]{0.31\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/CEROX1-210-db_iter-matrix.png}
         \caption{Matriz de probabilidades, CEROX1-210.}
         \label{fig:CEROX1-210-matrix}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[c]{0.31\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/CEROX1-210-db_vrna.png}
+        \caption{Conformación 2D CEROX1-210, ViennaRNA.}
+        \label{fig:CEROX1-210-vrna}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.31\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/CEROX1-210-db_rndc.png}
+        \caption{Conformación Aleatoria 2D CEROX1-210.}
+        \label{fig:CEROX1-210-rndc}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.31\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/CEROX1-210-db_one_conf.png}
+        \caption{Conformación 2D CEROX1-210, Random Walk.}
+        \label{fig:CEROX1-210-rndw}
     \end{minipage}
 \end{figure}
 
@@ -640,18 +683,32 @@ Estas preguntas abren la puerta a diferentes vías de investigación muy interes
 
 \begin{figure}[H]
     \centering
-    \begin{minipage}[c]{0.45\textwidth}
+    \begin{minipage}[c]{0.23\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/PCDH15-221-db_vrna.png}
         \caption{Conformación 2D PCDH15-221, ViennaRNA.}
         \label{fig:PCDH15-221-vrna}
     \end{minipage}
     \hfill
-    \begin{minipage}[c]{0.45\textwidth}
+    \begin{minipage}[c]{0.23\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/PCDH15-221-db_sqf.png}
         \caption{Conformación 2D PCDH15-221, SeqFold.}
         \label{fig:PCDH15-221-sqf}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.23\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/PCDH15-221-db_rndc.png}
+        \caption{Conformación Aleatoria 2D PCDH15-221.}
+        \label{fig:PCDH15-221-rndc}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.23\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/PCDH15-221-db_one_conf.png}
+        \caption{Conformación 2D PCDH15-221, Random Walk.}
+        \label{fig:PCDH15-221-rndw}
     \end{minipage}
 \end{figure}
 
@@ -668,35 +725,49 @@ Estas preguntas abren la puerta a diferentes vías de investigación muy interes
 
 \begin{figure}[H]
     \centering
-    \begin{minipage}[c]{0.45\textwidth}
+    \begin{minipage}[c]{0.31\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/VPS53-218-db_one.png}
         \caption{Conformación 3D VPS53-218, una iteración.}
         \label{fig:VPS53-218-one}
     \end{minipage}
     \hfill
-    \begin{minipage}[c]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{images/VPS53-218-db_vrna.png}
-        \caption{Conformación 2D VPS53-218, ViennaRNA.}
-        \label{fig:VPS53-218-vrna}
-    \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \begin{minipage}[c]{0.45\textwidth}
+    \begin{minipage}[c]{0.31\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/VPS53-218-db_iter.png}
         \caption{Conformación 3D VPS53-218, diez iteraciones.}
         \label{fig:VPS53-218-multi}
     \end{minipage}
     \hfill
-    \begin{minipage}[c]{0.45\textwidth}
+    \begin{minipage}[c]{0.31\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/VPS53-218-db_iter-matrix.png}
         \caption{Matriz de probabilidades, VPS53-218.}
         \label{fig:VPS53-218-matrix}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[c]{0.31\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/VPS53-218-db_vrna.png}
+        \caption{Conformación 2D VPS53-218, ViennaRNA.}
+        \label{fig:VPS53-218-vrna}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.31\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/VPS53-218-db_rndc.png}
+        \caption{Conformación Aleatoria 2D VPS53-218.}
+        \label{fig:VPS53-218-rndc}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.31\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/VPS53-218-db_one_conf.png}
+        \caption{Conformación 2D VPS53-218, Random Walk.}
+        \label{fig:VPS53-218-rndw}
     \end{minipage}
 \end{figure}
 
@@ -737,18 +808,32 @@ Estas preguntas abren la puerta a diferentes vías de investigación muy interes
 
 \begin{figure}[H]
     \centering
-    \begin{minipage}[c]{0.45\textwidth}
+    \begin{minipage}[c]{0.23\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/MACROH2A1-208-db_vrna.png}
         \caption{Conformación 2D MACROH2A1-208, ViennaRNA.}
         \label{fig:MACROH2A1-208-vrna}
     \end{minipage}
     \hfill
-    \begin{minipage}[c]{0.45\textwidth}
+    \begin{minipage}[c]{0.23\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/MACROH2A1-208-db_sqf.png}
         \caption{Conformación 2D MACROH2A1-208, SeqFold.}
         \label{fig:MACROH2A1-208-sqf}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.23\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/MACROH2A1-208-db_rndc.png}
+        \caption{Conformación Aleatoria 2D MACROH2A1-208.}
+        \label{fig:MACROH2A1-208-rndc}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.23\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/MACROH2A1-208-db_one_conf.png}
+        \caption{Conformación 2D MACROH2A1-208, Random Walk.}
+        \label{fig:MACROH2A1-208-rndw}
     \end{minipage}
 \end{figure}
 
@@ -765,35 +850,49 @@ Estas preguntas abren la puerta a diferentes vías de investigación muy interes
 
 \begin{figure}[H]
     \centering
-    \begin{minipage}[c]{0.45\textwidth}
+    \begin{minipage}[c]{0.31\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/R3HDML-201-db_one.png}
         \caption{Conformación 3D R3HDML-201, una iteración.}
         \label{fig:R3HDML-201-one}
     \end{minipage}
     \hfill
-    \begin{minipage}[c]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{images/R3HDML-201-db_vrna.png}
-        \caption{Conformación 2D R3HDML-201, ViennaRNA.}
-        \label{fig:R3HDML-201-vrna}
-    \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \begin{minipage}[c]{0.45\textwidth}
+    \begin{minipage}[c]{0.31\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/R3HDML-201-db_iter.png}
         \caption{Conformación 3D R3HDML-201, diez iteraciones.}
         \label{fig:R3HDML-201-multi}
     \end{minipage}
     \hfill
-    \begin{minipage}[c]{0.45\textwidth}
+    \begin{minipage}[c]{0.31\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/R3HDML-201-db_iter-matrix.png}
         \caption{Matriz de probabilidades, R3HDML-201.}
         \label{fig:R3HDML-201-matrix}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[c]{0.31\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/R3HDML-201-db_vrna.png}
+        \caption{Conformación 2D R3HDML-201, ViennaRNA.}
+        \label{fig:R3HDML-201-vrna}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.31\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/R3HDML-201-db_rndc.png}
+        \caption{Conformación Aleatoria 2D R3HDML-201.}
+        \label{fig:R3HDML-201-rndc}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.31\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/R3HDML-201-db_one_conf.png}
+        \caption{Conformación 2D R3HDML-201, Random Walk.}
+        \label{fig:R3HDML-201-rndw}
     \end{minipage}
 \end{figure}
 
