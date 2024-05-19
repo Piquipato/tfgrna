@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.11)  17 MAY 2024 23:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.11)  18 MAY 2024 14:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1168,7 +1168,7 @@ File: images/RNA_secondary_structure.png Graphic file (type png)
 Package pdftex.def Info: images/RNA_secondary_structure.png  used on input line 276.
 (pdftex.def)             Requested size: 317.07614pt x 103.47298pt.
  [4 <./images/RNA_secondary_structure.png>] [5] [6] [7]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 389.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 397.
  (c:/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -1176,266 +1176,266 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<images/RNA_random_dir.png, id=289, 199.509pt x 197.538pt>
+<images/RNA_random_dir.png, id=291, 199.509pt x 197.538pt>
 File: images/RNA_random_dir.png Graphic file (type png)
 <use images/RNA_random_dir.png>
-Package pdftex.def Info: images/RNA_random_dir.png  used on input line 405.
+Package pdftex.def Info: images/RNA_random_dir.png  used on input line 413.
 (pdftex.def)             Requested size: 135.89174pt x 134.55313pt.
  [8 <./images/RNA_random_dir.png>] [9] [10] [11]
-<images/RNA_conformations.png, id=352, 1361.085pt x 392.448pt>
+<images/RNA_conformations.png, id=354, 1361.085pt x 392.448pt>
 File: images/RNA_conformations.png Graphic file (type png)
 <use images/RNA_conformations.png>
-Package pdftex.def Info: images/RNA_conformations.png  used on input line 555.
+Package pdftex.def Info: images/RNA_conformations.png  used on input line 563.
 (pdftex.def)             Requested size: 385.02547pt x 111.01646pt.
  [12 <./images/RNA_conformations.png>] [13]
-Overfull \hbox (12.01314pt too wide) in paragraph at lines 583--583
+Overfull \hbox (12.01314pt too wide) in paragraph at lines 591--591
 []\T1/cmr/m/n/10.95 (-20) P. Lalanda-Delgado. ^^S  Pi-qui-pa-to/tfgrna.^^T (2024), di-rec-ción: []$\T1/cmtt/m/n/10.95 https : / / github . com / Piquipato /
  []
 
 [14]
-<images/CEROX1-210.png, id=391, 2409.0pt x 140.02313pt>
+<images/CEROX1-210.png, id=393, 2409.0pt x 140.02313pt>
 File: images/CEROX1-210.png Graphic file (type png)
 <use images/CEROX1-210.png>
-Package pdftex.def Info: images/CEROX1-210.png  used on input line 594.
+Package pdftex.def Info: images/CEROX1-210.png  used on input line 602.
 (pdftex.def)             Requested size: 452.9679pt x 26.3269pt.
-<images/CEROX1-210-db_one.png, id=392, 462.528pt x 346.896pt>
+<images/CEROX1-210-db_one.png, id=394, 462.528pt x 346.896pt>
 File: images/CEROX1-210-db_one.png Graphic file (type png)
 <use images/CEROX1-210-db_one.png>
-Package pdftex.def Info: images/CEROX1-210-db_one.png  used on input line 603.
+Package pdftex.def Info: images/CEROX1-210-db_one.png  used on input line 611.
 (pdftex.def)             Requested size: 140.41893pt x 105.31349pt.
-<images/CEROX1-210-db_iter.png, id=393, 462.528pt x 346.896pt>
+<images/CEROX1-210-db_iter.png, id=395, 462.528pt x 346.896pt>
 File: images/CEROX1-210-db_iter.png Graphic file (type png)
 <use images/CEROX1-210-db_iter.png>
-Package pdftex.def Info: images/CEROX1-210-db_iter.png  used on input line 610.
+Package pdftex.def Info: images/CEROX1-210-db_iter.png  used on input line 618.
 (pdftex.def)             Requested size: 140.41893pt x 105.31349pt.
-<images/CEROX1-210-db_iter-matrix.png, id=394, 462.528pt x 346.896pt>
+<images/CEROX1-210-db_iter-matrix.png, id=396, 462.528pt x 346.896pt>
 File: images/CEROX1-210-db_iter-matrix.png Graphic file (type png)
 <use images/CEROX1-210-db_iter-matrix.png>
-Package pdftex.def Info: images/CEROX1-210-db_iter-matrix.png  used on input line 617.
+Package pdftex.def Info: images/CEROX1-210-db_iter-matrix.png  used on input line 625.
 (pdftex.def)             Requested size: 140.41893pt x 105.31349pt.
-<images/CEROX1-210-db_vrna.png, id=395, 453.695pt x 453.695pt>
+<images/CEROX1-210-db_vrna.png, id=397, 453.695pt x 453.695pt>
 File: images/CEROX1-210-db_vrna.png Graphic file (type png)
 <use images/CEROX1-210-db_vrna.png>
-Package pdftex.def Info: images/CEROX1-210-db_vrna.png  used on input line 627.
+Package pdftex.def Info: images/CEROX1-210-db_vrna.png  used on input line 635.
 (pdftex.def)             Requested size: 140.41893pt x 140.41554pt.
-<images/CEROX1-210-db_rndc.png, id=396, 453.695pt x 453.695pt>
+<images/CEROX1-210-db_rndc.png, id=398, 453.695pt x 453.695pt>
 File: images/CEROX1-210-db_rndc.png Graphic file (type png)
 <use images/CEROX1-210-db_rndc.png>
-Package pdftex.def Info: images/CEROX1-210-db_rndc.png  used on input line 634.
+Package pdftex.def Info: images/CEROX1-210-db_rndc.png  used on input line 642.
 (pdftex.def)             Requested size: 140.41893pt x 140.41554pt.
-<images/CEROX1-210-db_one_conf.png, id=397, 453.695pt x 453.695pt>
+<images/CEROX1-210-db_one_conf.png, id=399, 453.695pt x 453.695pt>
 File: images/CEROX1-210-db_one_conf.png Graphic file (type png)
 <use images/CEROX1-210-db_one_conf.png>
-Package pdftex.def Info: images/CEROX1-210-db_one_conf.png  used on input line 641.
+Package pdftex.def Info: images/CEROX1-210-db_one_conf.png  used on input line 649.
 (pdftex.def)             Requested size: 140.41893pt x 140.41554pt.
  [15 <./images/CEROX1-210.png (PNG copy)> <./images/CEROX1-210-db_one.png> <./images/CEROX1-210-db_iter.png> <./images/CEROX1-210-db_iter-matrix.png> <./images/CEROX1-210-db_vrna.png> <./images/CEROX1-210-db_rndc.png> <./images/CEROX1-210-db_one_conf.png>]
-<images/PCDH15-221.png, id=409, 2409.0pt x 140.02313pt>
+<images/PCDH15-221.png, id=411, 2409.0pt x 140.02313pt>
 File: images/PCDH15-221.png Graphic file (type png)
 <use images/PCDH15-221.png>
-Package pdftex.def Info: images/PCDH15-221.png  used on input line 655.
+Package pdftex.def Info: images/PCDH15-221.png  used on input line 663.
 (pdftex.def)             Requested size: 452.9679pt x 26.3269pt.
-<images/PCDH15-221-db_one.png, id=410, 462.528pt x 346.896pt>
+<images/PCDH15-221-db_one.png, id=412, 462.528pt x 346.896pt>
 File: images/PCDH15-221-db_one.png Graphic file (type png)
 <use images/PCDH15-221-db_one.png>
-Package pdftex.def Info: images/PCDH15-221-db_one.png  used on input line 664.
+Package pdftex.def Info: images/PCDH15-221-db_one.png  used on input line 672.
 (pdftex.def)             Requested size: 140.41893pt x 105.31349pt.
-<images/PCDH15-221-db_iter.png, id=411, 462.528pt x 346.896pt>
+<images/PCDH15-221-db_iter.png, id=413, 462.528pt x 346.896pt>
 File: images/PCDH15-221-db_iter.png Graphic file (type png)
 <use images/PCDH15-221-db_iter.png>
-Package pdftex.def Info: images/PCDH15-221-db_iter.png  used on input line 671.
+Package pdftex.def Info: images/PCDH15-221-db_iter.png  used on input line 679.
 (pdftex.def)             Requested size: 140.41893pt x 105.31349pt.
-<images/PCDH15-221-db_iter-matrix.png, id=412, 462.528pt x 346.896pt>
+<images/PCDH15-221-db_iter-matrix.png, id=414, 462.528pt x 346.896pt>
 File: images/PCDH15-221-db_iter-matrix.png Graphic file (type png)
 <use images/PCDH15-221-db_iter-matrix.png>
-Package pdftex.def Info: images/PCDH15-221-db_iter-matrix.png  used on input line 678.
+Package pdftex.def Info: images/PCDH15-221-db_iter-matrix.png  used on input line 686.
 (pdftex.def)             Requested size: 140.41893pt x 105.31349pt.
-<images/PCDH15-221-db_vrna.png, id=413, 453.695pt x 453.695pt>
+<images/PCDH15-221-db_vrna.png, id=415, 453.695pt x 453.695pt>
 File: images/PCDH15-221-db_vrna.png Graphic file (type png)
 <use images/PCDH15-221-db_vrna.png>
-Package pdftex.def Info: images/PCDH15-221-db_vrna.png  used on input line 688.
+Package pdftex.def Info: images/PCDH15-221-db_vrna.png  used on input line 696.
 (pdftex.def)             Requested size: 104.18068pt x 104.1815pt.
-<images/PCDH15-221-db_sqf.png, id=414, 453.695pt x 453.695pt>
+<images/PCDH15-221-db_sqf.png, id=416, 453.695pt x 453.695pt>
 File: images/PCDH15-221-db_sqf.png Graphic file (type png)
 <use images/PCDH15-221-db_sqf.png>
-Package pdftex.def Info: images/PCDH15-221-db_sqf.png  used on input line 695.
+Package pdftex.def Info: images/PCDH15-221-db_sqf.png  used on input line 703.
 (pdftex.def)             Requested size: 104.18068pt x 104.1815pt.
-<images/PCDH15-221-db_rndc.png, id=415, 453.695pt x 453.695pt>
+<images/PCDH15-221-db_rndc.png, id=417, 453.695pt x 453.695pt>
 File: images/PCDH15-221-db_rndc.png Graphic file (type png)
 <use images/PCDH15-221-db_rndc.png>
-Package pdftex.def Info: images/PCDH15-221-db_rndc.png  used on input line 702.
+Package pdftex.def Info: images/PCDH15-221-db_rndc.png  used on input line 710.
 (pdftex.def)             Requested size: 104.18068pt x 104.1815pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 703--703
+Underfull \hbox (badness 10000) in paragraph at lines 711--711
 []\T1/cmr/m/n/10.95 (+20) Figura 20: |Con-for-
  []
 
-<images/PCDH15-221-db_one_conf.png, id=416, 453.695pt x 453.695pt>
+<images/PCDH15-221-db_one_conf.png, id=418, 453.695pt x 453.695pt>
 File: images/PCDH15-221-db_one_conf.png Graphic file (type png)
 <use images/PCDH15-221-db_one_conf.png>
-Package pdftex.def Info: images/PCDH15-221-db_one_conf.png  used on input line 709.
+Package pdftex.def Info: images/PCDH15-221-db_one_conf.png  used on input line 717.
 (pdftex.def)             Requested size: 104.18068pt x 104.1815pt.
 [16 <./images/PCDH15-221.png (PNG copy)> <./images/PCDH15-221-db_one.png> <./images/PCDH15-221-db_iter.png> <./images/PCDH15-221-db_iter-matrix.png> <./images/PCDH15-221-db_vrna.png> <./images/PCDH15-221-db_sqf.png> <./images/PCDH15-221-db_rndc.png> <./images/PCDH15-221-db_one_conf.png>]
-<images/VPS53-218.png, id=428, 2409.0pt x 140.02313pt>
+<images/VPS53-218.png, id=430, 2409.0pt x 140.02313pt>
 File: images/VPS53-218.png Graphic file (type png)
 <use images/VPS53-218.png>
-Package pdftex.def Info: images/VPS53-218.png  used on input line 721.
+Package pdftex.def Info: images/VPS53-218.png  used on input line 729.
 (pdftex.def)             Requested size: 452.9679pt x 26.3269pt.
-<images/VPS53-218-db_one.png, id=429, 462.528pt x 346.896pt>
+<images/VPS53-218-db_one.png, id=431, 462.528pt x 346.896pt>
 File: images/VPS53-218-db_one.png Graphic file (type png)
 <use images/VPS53-218-db_one.png>
-Package pdftex.def Info: images/VPS53-218-db_one.png  used on input line 730.
+Package pdftex.def Info: images/VPS53-218-db_one.png  used on input line 738.
 (pdftex.def)             Requested size: 140.41893pt x 105.31349pt.
-<images/VPS53-218-db_iter.png, id=430, 462.528pt x 346.896pt>
+<images/VPS53-218-db_iter.png, id=432, 462.528pt x 346.896pt>
 File: images/VPS53-218-db_iter.png Graphic file (type png)
 <use images/VPS53-218-db_iter.png>
-Package pdftex.def Info: images/VPS53-218-db_iter.png  used on input line 737.
+Package pdftex.def Info: images/VPS53-218-db_iter.png  used on input line 745.
 (pdftex.def)             Requested size: 140.41893pt x 105.31349pt.
-<images/VPS53-218-db_iter-matrix.png, id=431, 462.528pt x 346.896pt>
+<images/VPS53-218-db_iter-matrix.png, id=433, 462.528pt x 346.896pt>
 File: images/VPS53-218-db_iter-matrix.png Graphic file (type png)
 <use images/VPS53-218-db_iter-matrix.png>
-Package pdftex.def Info: images/VPS53-218-db_iter-matrix.png  used on input line 744.
+Package pdftex.def Info: images/VPS53-218-db_iter-matrix.png  used on input line 752.
 (pdftex.def)             Requested size: 140.41893pt x 105.31349pt.
-<images/VPS53-218-db_vrna.png, id=432, 453.695pt x 453.695pt>
+<images/VPS53-218-db_vrna.png, id=434, 453.695pt x 453.695pt>
 File: images/VPS53-218-db_vrna.png Graphic file (type png)
 <use images/VPS53-218-db_vrna.png>
-Package pdftex.def Info: images/VPS53-218-db_vrna.png  used on input line 754.
+Package pdftex.def Info: images/VPS53-218-db_vrna.png  used on input line 762.
 (pdftex.def)             Requested size: 140.41893pt x 140.41554pt.
-<images/VPS53-218-db_rndc.png, id=433, 453.695pt x 453.695pt>
+<images/VPS53-218-db_rndc.png, id=435, 453.695pt x 453.695pt>
 File: images/VPS53-218-db_rndc.png Graphic file (type png)
 <use images/VPS53-218-db_rndc.png>
-Package pdftex.def Info: images/VPS53-218-db_rndc.png  used on input line 761.
+Package pdftex.def Info: images/VPS53-218-db_rndc.png  used on input line 769.
 (pdftex.def)             Requested size: 140.41893pt x 140.41554pt.
-<images/VPS53-218-db_one_conf.png, id=434, 453.695pt x 453.695pt>
+<images/VPS53-218-db_one_conf.png, id=436, 453.695pt x 453.695pt>
 File: images/VPS53-218-db_one_conf.png Graphic file (type png)
 <use images/VPS53-218-db_one_conf.png>
-Package pdftex.def Info: images/VPS53-218-db_one_conf.png  used on input line 768.
+Package pdftex.def Info: images/VPS53-218-db_one_conf.png  used on input line 776.
 (pdftex.def)             Requested size: 140.41893pt x 140.41554pt.
  [17 <./images/VPS53-218.png (PNG copy)> <./images/VPS53-218-db_one.png> <./images/VPS53-218-db_iter.png> <./images/VPS53-218-db_iter-matrix.png> <./images/VPS53-218-db_vrna.png> <./images/VPS53-218-db_rndc.png> <./images/VPS53-218-db_one_conf.png>]
-<images/MACROH2A1-208.png, id=448, 2409.0pt x 140.02313pt>
+<images/MACROH2A1-208.png, id=450, 2409.0pt x 140.02313pt>
 File: images/MACROH2A1-208.png Graphic file (type png)
 <use images/MACROH2A1-208.png>
-Package pdftex.def Info: images/MACROH2A1-208.png  used on input line 780.
+Package pdftex.def Info: images/MACROH2A1-208.png  used on input line 788.
 (pdftex.def)             Requested size: 452.9679pt x 26.3269pt.
-<images/MACROH2A1-208-db_one.png, id=449, 462.528pt x 346.896pt>
+<images/MACROH2A1-208-db_one.png, id=451, 462.528pt x 346.896pt>
 File: images/MACROH2A1-208-db_one.png Graphic file (type png)
 <use images/MACROH2A1-208-db_one.png>
-Package pdftex.def Info: images/MACROH2A1-208-db_one.png  used on input line 789.
+Package pdftex.def Info: images/MACROH2A1-208-db_one.png  used on input line 797.
 (pdftex.def)             Requested size: 140.41893pt x 105.31349pt.
-<images/MACROH2A1-208-db_iter.png, id=450, 462.528pt x 346.896pt>
+<images/MACROH2A1-208-db_iter.png, id=452, 462.528pt x 346.896pt>
 File: images/MACROH2A1-208-db_iter.png Graphic file (type png)
 <use images/MACROH2A1-208-db_iter.png>
-Package pdftex.def Info: images/MACROH2A1-208-db_iter.png  used on input line 796.
+Package pdftex.def Info: images/MACROH2A1-208-db_iter.png  used on input line 804.
 (pdftex.def)             Requested size: 140.41893pt x 105.31349pt.
-<images/MACROH2A1-208-db_iter-matrix.png, id=451, 462.528pt x 346.896pt>
+<images/MACROH2A1-208-db_iter-matrix.png, id=453, 462.528pt x 346.896pt>
 File: images/MACROH2A1-208-db_iter-matrix.png Graphic file (type png)
 <use images/MACROH2A1-208-db_iter-matrix.png>
-Package pdftex.def Info: images/MACROH2A1-208-db_iter-matrix.png  used on input line 803.
+Package pdftex.def Info: images/MACROH2A1-208-db_iter-matrix.png  used on input line 811.
 (pdftex.def)             Requested size: 140.41893pt x 105.31349pt.
-<images/MACROH2A1-208-db_vrna.png, id=452, 453.695pt x 453.695pt>
+<images/MACROH2A1-208-db_vrna.png, id=454, 453.695pt x 453.695pt>
 File: images/MACROH2A1-208-db_vrna.png Graphic file (type png)
 <use images/MACROH2A1-208-db_vrna.png>
-Package pdftex.def Info: images/MACROH2A1-208-db_vrna.png  used on input line 813.
+Package pdftex.def Info: images/MACROH2A1-208-db_vrna.png  used on input line 821.
 (pdftex.def)             Requested size: 104.18068pt x 104.1815pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 814--814
+Underfull \hbox (badness 10000) in paragraph at lines 822--822
 []\T1/cmr/m/n/10.95 (+20) Figura 33: |Con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 814--814
+Underfull \hbox (badness 10000) in paragraph at lines 822--822
 \T1/cmr/m/n/10.95 (+20) for-ma-ción 2D
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 814--814
+Underfull \hbox (badness 10000) in paragraph at lines 822--822
 \T1/cmr/m/n/10.95 (+20) MACROH2A1-208,
  []
 
-<images/MACROH2A1-208-db_sqf.png, id=453, 453.695pt x 453.695pt>
+<images/MACROH2A1-208-db_sqf.png, id=455, 453.695pt x 453.695pt>
 File: images/MACROH2A1-208-db_sqf.png Graphic file (type png)
 <use images/MACROH2A1-208-db_sqf.png>
-Package pdftex.def Info: images/MACROH2A1-208-db_sqf.png  used on input line 820.
+Package pdftex.def Info: images/MACROH2A1-208-db_sqf.png  used on input line 828.
 (pdftex.def)             Requested size: 104.18068pt x 104.1815pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 821--821
+Underfull \hbox (badness 10000) in paragraph at lines 829--829
 []\T1/cmr/m/n/10.95 (+20) Figura 34: |Con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 821--821
+Underfull \hbox (badness 10000) in paragraph at lines 829--829
 \T1/cmr/m/n/10.95 (+20) for-ma-ción 2D
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 821--821
+Underfull \hbox (badness 10000) in paragraph at lines 829--829
 \T1/cmr/m/n/10.95 (+20) MACROH2A1-208,
  []
 
-<images/MACROH2A1-208-db_rndc.png, id=454, 453.695pt x 453.695pt>
+<images/MACROH2A1-208-db_rndc.png, id=456, 453.695pt x 453.695pt>
 File: images/MACROH2A1-208-db_rndc.png Graphic file (type png)
 <use images/MACROH2A1-208-db_rndc.png>
-Package pdftex.def Info: images/MACROH2A1-208-db_rndc.png  used on input line 827.
+Package pdftex.def Info: images/MACROH2A1-208-db_rndc.png  used on input line 835.
 (pdftex.def)             Requested size: 104.18068pt x 104.1815pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 828--828
+Underfull \hbox (badness 10000) in paragraph at lines 836--836
 []\T1/cmr/m/n/10.95 (+20) Figura 35: |Con-for-
  []
 
-<images/MACROH2A1-208-db_one_conf.png, id=455, 453.695pt x 453.695pt>
+<images/MACROH2A1-208-db_one_conf.png, id=457, 453.695pt x 453.695pt>
 File: images/MACROH2A1-208-db_one_conf.png Graphic file (type png)
 <use images/MACROH2A1-208-db_one_conf.png>
-Package pdftex.def Info: images/MACROH2A1-208-db_one_conf.png  used on input line 834.
+Package pdftex.def Info: images/MACROH2A1-208-db_one_conf.png  used on input line 842.
 (pdftex.def)             Requested size: 104.18068pt x 104.1815pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 835--835
+Underfull \hbox (badness 10000) in paragraph at lines 843--843
 []\T1/cmr/m/n/10.95 (+20) Figura 36: |Con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 835--835
+Underfull \hbox (badness 10000) in paragraph at lines 843--843
 \T1/cmr/m/n/10.95 (+20) for-ma-ción 2D
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 835--835
+Underfull \hbox (badness 10000) in paragraph at lines 843--843
 \T1/cmr/m/n/10.95 (+20) MACROH2A1-208,
  []
 
 [18 <./images/MACROH2A1-208.png (PNG copy)> <./images/MACROH2A1-208-db_one.png> <./images/MACROH2A1-208-db_iter.png> <./images/MACROH2A1-208-db_iter-matrix.png> <./images/MACROH2A1-208-db_vrna.png> <./images/MACROH2A1-208-db_sqf.png> <./images/MACROH2A1-208-db_rndc.png> <./images/MACROH2A1-208-db_one_conf.png>]
-<images/R3HDML-201.png, id=467, 2409.0pt x 140.02313pt>
+<images/R3HDML-201.png, id=469, 2409.0pt x 140.02313pt>
 File: images/R3HDML-201.png Graphic file (type png)
 <use images/R3HDML-201.png>
-Package pdftex.def Info: images/R3HDML-201.png  used on input line 846.
+Package pdftex.def Info: images/R3HDML-201.png  used on input line 854.
 (pdftex.def)             Requested size: 452.9679pt x 26.3269pt.
-<images/R3HDML-201-db_one.png, id=468, 462.528pt x 346.896pt>
+<images/R3HDML-201-db_one.png, id=470, 462.528pt x 346.896pt>
 File: images/R3HDML-201-db_one.png Graphic file (type png)
 <use images/R3HDML-201-db_one.png>
-Package pdftex.def Info: images/R3HDML-201-db_one.png  used on input line 855.
+Package pdftex.def Info: images/R3HDML-201-db_one.png  used on input line 863.
 (pdftex.def)             Requested size: 140.41893pt x 105.31349pt.
-<images/R3HDML-201-db_iter.png, id=469, 462.528pt x 346.896pt>
+<images/R3HDML-201-db_iter.png, id=471, 462.528pt x 346.896pt>
 File: images/R3HDML-201-db_iter.png Graphic file (type png)
 <use images/R3HDML-201-db_iter.png>
-Package pdftex.def Info: images/R3HDML-201-db_iter.png  used on input line 862.
+Package pdftex.def Info: images/R3HDML-201-db_iter.png  used on input line 870.
 (pdftex.def)             Requested size: 140.41893pt x 105.31349pt.
-<images/R3HDML-201-db_iter-matrix.png, id=470, 462.528pt x 346.896pt>
+<images/R3HDML-201-db_iter-matrix.png, id=472, 462.528pt x 346.896pt>
 File: images/R3HDML-201-db_iter-matrix.png Graphic file (type png)
 <use images/R3HDML-201-db_iter-matrix.png>
-Package pdftex.def Info: images/R3HDML-201-db_iter-matrix.png  used on input line 869.
+Package pdftex.def Info: images/R3HDML-201-db_iter-matrix.png  used on input line 877.
 (pdftex.def)             Requested size: 140.41893pt x 105.31349pt.
-<images/R3HDML-201-db_vrna.png, id=471, 453.695pt x 453.695pt>
+<images/R3HDML-201-db_vrna.png, id=473, 453.695pt x 453.695pt>
 File: images/R3HDML-201-db_vrna.png Graphic file (type png)
 <use images/R3HDML-201-db_vrna.png>
-Package pdftex.def Info: images/R3HDML-201-db_vrna.png  used on input line 879.
+Package pdftex.def Info: images/R3HDML-201-db_vrna.png  used on input line 887.
 (pdftex.def)             Requested size: 140.41893pt x 140.41554pt.
-<images/R3HDML-201-db_rndc.png, id=472, 453.695pt x 453.695pt>
+<images/R3HDML-201-db_rndc.png, id=474, 453.695pt x 453.695pt>
 File: images/R3HDML-201-db_rndc.png Graphic file (type png)
 <use images/R3HDML-201-db_rndc.png>
-Package pdftex.def Info: images/R3HDML-201-db_rndc.png  used on input line 886.
+Package pdftex.def Info: images/R3HDML-201-db_rndc.png  used on input line 894.
 (pdftex.def)             Requested size: 140.41893pt x 140.41554pt.
-<images/R3HDML-201-db_one_conf.png, id=473, 453.695pt x 453.695pt>
+<images/R3HDML-201-db_one_conf.png, id=475, 453.695pt x 453.695pt>
 File: images/R3HDML-201-db_one_conf.png Graphic file (type png)
 <use images/R3HDML-201-db_one_conf.png>
-Package pdftex.def Info: images/R3HDML-201-db_one_conf.png  used on input line 893.
+Package pdftex.def Info: images/R3HDML-201-db_one_conf.png  used on input line 901.
 (pdftex.def)             Requested size: 140.41893pt x 140.41554pt.
  [19 <./images/R3HDML-201.png (PNG copy)> <./images/R3HDML-201-db_one.png> <./images/R3HDML-201-db_iter.png> <./images/R3HDML-201-db_iter-matrix.png> <./images/R3HDML-201-db_vrna.png> <./images/R3HDML-201-db_rndc.png> <./images/R3HDML-201-db_one_conf.png>] (./main.aux
 LaTeX Info: Redefining \sptext on input line 34.
@@ -1449,18 +1449,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30305 strings out of 478353
- 549920 string characters out of 5852101
- 1292228 words of memory out of 5000000
- 47611 multiletter control sequences out of 15000+600000
- 426568 words of font info for 157 fonts, out of 8000000 for 9000
+ 30314 strings out of 478353
+ 550033 string characters out of 5852101
+ 1292230 words of memory out of 5000000
+ 47614 multiletter control sequences out of 15000+600000
+ 427450 words of font info for 160 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,17n,92p,1905b,2002s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on main.pdf (21 pages, 4281329 bytes).
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on main.pdf (21 pages, 4298353 bytes).
 PDF statistics:
- 600 PDF objects out of 1000 (max. 8388607)
- 431 compressed objects within 5 object streams
- 93 named destinations out of 1000 (max. 500000)
- 37773 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 606 PDF objects out of 1000 (max. 8388607)
+ 435 compressed objects within 5 object streams
+ 94 named destinations out of 1000 (max. 500000)
+ 39821 words of extra memory for PDF output out of 42996 (max. 10000000)
 

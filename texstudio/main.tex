@@ -317,6 +317,14 @@ Así mismo, se puede calcular la función de partición del segmento $Z_{ij}$, a
     p_{ij} = \frac{Z_{1,i-1}Z_{j+1,N} \exp{\p{-\frac{\epsilon_{ij}}{kT}}}}{Z_{1N}}
 \end{gather}
 
+A partir de la matriz de probabilidad, podemos definir la "entropía posicional" de un nucleótido dado,
+
+\begin{equation}
+    S_i = - \sum_i p_{ij} \log{p_{ij}} % https://en.wikipedia.org/wiki/Ideal_chain
+\end{equation}
+
+Esta cantidad puede resultar informativa a la hora de valorar la fiabilidad de la predicción realizada con el modelo de programación dinámica.
+
 Lo que todos los modelos de programación dinámica tienen en común es el procedimiento recursivo aquí expuesto. Las diferencias entre ellos son los parámetros termodinámicos que se tienen en cuenta en los modelos, como sería en el caso del modelo expuesto $\epsilon_{ij}$. Estos parámetros se pueden ajustar para reflejar mejor los resultados obtenidos en experimentos termodinámicos realizados con cadenas de ARN.
 
 %Cabe destacar que la energía del modelo (medida en unidades arbitrarias del programa), $E_{1N}$, no es la energía libre de la cadena, $G$, sino la energía total de la misma, $U$, relacionadas mediante la entropía de la cadena de acuerdo a $G = U + TS$. Lo que nos indica este hecho realmente es que a la hora de minimizar la energía libre de la cadena, hay que tener en cuenta a que temperatura a la que hacemos la aproximación. La entropía se puede calcular fácilmente partiendo de la tabla de probabilidades de cada enlace, 
