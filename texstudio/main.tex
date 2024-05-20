@@ -221,8 +221,7 @@ El estudio de la estructura secundaria del ARN ofrece la posibilidad de una mejo
     \begin{center}
       \includegraphics[width=0.35\textwidth]{images/adn.png}
     \end{center}
-    \small{\caption{Cadena de ADN.}}\normalsize
-    \label{fig:adnchain}
+    \small{\caption{Cadena de ADN.}\label{fig:adnchain}}\normalsize
 \end{wrapfigure}
 
 Según el dogma central de la biología molecular, la información genética dentro de cualquier célula se transmite del ADN al ARN, por medio de la transcripción, y de este último se traduce a proteína, que es la molécula que en última instancia la célula usa para realizar una acción dada \cite{alberts}.
@@ -248,8 +247,7 @@ El ARN esta compuesto por cuatro ácidos nucleicos (adenina, citosina, guanina, 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/RNA_base_pairs.png}
-    \small{\caption{Pares de bases complementarias del ARN, \href{https://es.wikipedia.org/wiki/Apareamiento_de_bases}{Wikipedia}.}}\normalsize
-    \label{fig:RNA_base_pairs}
+    \small{\caption{Pares de bases complementarias del ARN, \href{https://es.wikipedia.org/wiki/Apareamiento_de_bases}{Wikipedia}.}\label{fig:RNA_base_pairs}}\normalsize
 \end{figure}
 
 
@@ -257,8 +255,7 @@ El ARN esta compuesto por cuatro ácidos nucleicos (adenina, citosina, guanina, 
     \begin{center}
       \includegraphics[width=0.18\textwidth]{images/RNA_chemical_structure.png}
     \end{center}
-    \small{\caption{Estructura química del ARN.}}\normalsize
-    \label{fig:arnchain}
+    \small{\caption{Estructura química del ARN.}\label{fig:arnchain}}\normalsize
 \end{wrapfigure}
 
 Tanto para la cadena de ADN como para la de ARN se pueden definir direcciones en función de los átomos a los que se enlazan las ribosas y las desoxiribosas, también conocidas como pentosas. Se denomina al extremo de la cadena en la que el tercer carbono de las pentosas queda sin enlazar extremo 3' de la cadena. Por analogía, al extremo contrario, en el que el quinto carbono de las pentosas queda sin enlazar se le denomina extremo 5'.
@@ -274,8 +271,7 @@ En lo que a la estructura tridimensional que el ARN presenta, se puede estudiar 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.70\textwidth]{images/RNA_secondary_structure.png}
-    \small{\caption{Motivos de la estructura secundaria del ARN.}}\normalsize
-    \label{fig:RNA_secondary_structure}
+    \small{\caption{Motivos de la estructura secundaria del ARN.}\label{fig:RNA_secondary_structure}}\normalsize
 \end{figure}
 
 El principal objetivo de cualquier modelo computacional dedicado a predecir la estructura tridimensional del ARN es predecir correctamente su estructura secundaria, bajo la suposición de que la estructura terciaria se forma tras la conformación de la estructura secundaria, por ser interacciones con menos probabilidad de ocurrir y menos estables. A continuación expongo los diferentes modelos computacionales que existen para predecir dicha estructura.
@@ -509,8 +505,7 @@ Tras obtener una base de $\sim156.000$ transcritos de genes de múltiples especi
 		\bottomrule
 	\end{tabular}
     \end{adjustbox}
-	\small{\caption{Metadatos de los transcritos escogidos. La columna \textit{Longitud} (medida en pares de bases, $bp.$) indica la longitud del transcrito estudiado. La columna \textit{Biotipo} indica la función biológica del transcrito. La columna \textit{SeqFold} indica si se pudo ejecutar el algoritmo de \textit{SeqFold} para dicho transcrito.}}\normalsize
-    \label{tab:transcripts}
+	\small{\caption{Metadatos de los transcritos escogidos. La columna \textit{Longitud} (medida en pares de bases, $bp.$) indica la longitud del transcrito estudiado. La columna \textit{Biotipo} indica la función biológica del transcrito. La columna \textit{SeqFold} indica si se pudo ejecutar el algoritmo de \textit{SeqFold} para dicho transcrito.}\label{tab:transcripts}}\normalsize
 \end{table}
 
 Para cada transcrito en la \nr[Tabla]{tab:transcripts} se obtuvieron las secuencias de los genes que los codifican, así como las secuencias de cada transcrito para realizar la simulación, mediante la API de Ensembl. Además, se hicieron las siguientes simulaciones, en base a los modelos explicados: 
@@ -567,8 +562,7 @@ Los resultados obtenidos se muestran en la \nr[Tabla]{tab:linking}:
 		\bottomrule
 	\end{tabular}
     \end{adjustbox}
-	\small{\caption{Número de enlaces encontrados para cada cadena.}}\normalsize
-    \label{tab:linking}
+	\small{\caption{Número de enlaces encontrados para cada cadena.}\label{tab:linking}}\normalsize
 \end{table}
 
 Nótese que se satisface la relación $E_{1N} = - n_{linked} / 2$, siendo $n_{linked}$ el número de nucleotidos enlazados. Esto se debe a que cada par de nucleotidos enlazados contribuye a la energía total $\epsilon_{ij} = -1$ (medido en $u.a.$). 
@@ -596,8 +590,7 @@ Estas conclusiones surgen al comparar la estructura predicha del modelo Random W
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{images/RNA_conformations.png}
-    \caption{Ejemplo de conformaciones calculadas con los diferentes modelos del estudio.}
-    \label{fig:RNA_conformations}
+    \small{\caption{Ejemplo de conformaciones calculadas con los diferentes modelos del estudio.}\label{fig:RNA_conformations}}\normalsize
 \end{figure}
 
 Sin embargo, a la vista de estos resultados cabe mencionar una serie de vías de mejora del modelo, que podrían acercarlo más a predecir correctamente estructuras reales.
@@ -635,8 +628,7 @@ Estas preguntas abren la puerta a diferentes vías de investigación en la mater
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/CEROX1-210_full.png}
-    \small{\caption{Resultados para el transcrito CEROX1-210: A) Diagrama del transcrito, B) Modelo Random Walk, una iteración, C) Modelo Random Walk, diez iteraciones, D) Matriz de Probabilidades, diez iteraciones, E) Conformación 2D, \textit{ViennaRNA}, F) Conformación 2D, Modelo Random Walk, G) Conformación Aleatoria 2D.}}\normalsize
-    \label{fig:CEROX1-210-diag}
+    \small{\caption{Resultados para el transcrito CEROX1-210: A) Diagrama del transcrito, B) Modelo Random Walk, una iteración, C) Modelo Random Walk, diez iteraciones, D) Matriz de Probabilidades, diez iteraciones, E) Conformación 2D, \textit{ViennaRNA}, F) Conformación 2D, Modelo Random Walk, G) Conformación Aleatoria 2D.}\label{fig:CEROX1-210-diag}}\normalsize
 \end{figure}
 
 %\begin{figure}[H]
@@ -703,8 +695,7 @@ Estas preguntas abren la puerta a diferentes vías de investigación en la mater
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/PCDH15-221_full.png}
-    \small{\caption{Resultados para el transcrito PCDH15-221: A) Diagrama del transcrito, B) Modelo Random Walk, una iteración, C) Modelo Random Walk, diez iteraciones, D) Matriz de Probabilidades, diez iteraciones, E) Conformación 2D, \textit{ViennaRNA}, F) Conformación 2D, \textit{SeqFold}, G) Conformación 2D, Modelo Random Walk, H) Conformación Aleatoria 2D.}}\normalsize
-    \label{fig:PCDH15-221-diag}
+    \small{\caption{Resultados para el transcrito PCDH15-221: A) Diagrama del transcrito, B) Modelo Random Walk, una iteración, C) Modelo Random Walk, diez iteraciones, D) Matriz de Probabilidades, diez iteraciones, E) Conformación 2D, \textit{ViennaRNA}, F) Conformación 2D, \textit{SeqFold}, G) Conformación 2D, Modelo Random Walk, H) Conformación Aleatoria 2D.}\label{fig:PCDH15-221-diag}}\normalsize
 \end{figure}
 
 % \begin{figure}[H]
@@ -776,8 +767,7 @@ Estas preguntas abren la puerta a diferentes vías de investigación en la mater
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/VPS53-218_full.png}
-    \small{\caption{Resultados para el transcrito VPS53-218: A) Diagrama del transcrito, B) Modelo Random Walk, una iteración, C) Modelo Random Walk, diez iteraciones, D) Matriz de Probabilidades, diez iteraciones, E) Conformación 2D, \textit{ViennaRNA}, F) Conformación 2D, Modelo Random Walk, G) Conformación Aleatoria 2D.}}\normalsize
-    \label{fig:VPS53-218-diag}
+    \small{\caption{Resultados para el transcrito VPS53-218: A) Diagrama del transcrito, B) Modelo Random Walk, una iteración, C) Modelo Random Walk, diez iteraciones, D) Matriz de Probabilidades, diez iteraciones, E) Conformación 2D, \textit{ViennaRNA}, F) Conformación 2D, Modelo Random Walk, G) Conformación Aleatoria 2D.}\label{fig:VPS53-218-diag}}\normalsize
 \end{figure}
 
 % \begin{figure}[H]
@@ -842,8 +832,7 @@ Estas preguntas abren la puerta a diferentes vías de investigación en la mater
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/MACROH2A1-208_full.png}
-    \small{\caption{Resultados para el transcrito MACROH2A1-208: A) Diagrama del transcrito, B) Modelo Random Walk, una iteración, C) Modelo Random Walk, diez iteraciones, D) Matriz de Probabilidades, diez iteraciones, E) Conformación 2D, \textit{ViennaRNA}, F) Conformación 2D, \textit{SeqFold}, G) Conformación 2D, Modelo Random Walk, H) Conformación Aleatoria 2D.}}\normalsize
-    \label{fig:MACROH2A1-208-diag}
+    \small{\caption{Resultados para el transcrito MACROH2A1-208: A) Diagrama del transcrito, B) Modelo Random Walk, una iteración, C) Modelo Random Walk, diez iteraciones, D) Matriz de Probabilidades, diez iteraciones, E) Conformación 2D, \textit{ViennaRNA}, F) Conformación 2D, \textit{SeqFold}, G) Conformación 2D, Modelo Random Walk, H) Conformación Aleatoria 2D.}\label{fig:MACROH2A1-208-diag}}\normalsize
 \end{figure}
 
 % \begin{figure}[H]
@@ -915,8 +904,7 @@ Estas preguntas abren la puerta a diferentes vías de investigación en la mater
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/R3HDML-201_full.png}
-    \small{\caption{Resultados para el transcrito R3HDML-201: A) Diagrama del transcrito, B) Modelo Random Walk, una iteración, C) Modelo Random Walk, diez iteraciones, D) Matriz de Probabilidades, diez iteraciones, E) Conformación 2D, \textit{ViennaRNA}, F) Conformación 2D, Modelo Random Walk, G) Conformación Aleatoria 2D.}}\normalsize
-    \label{fig:R3HDML-201-diag}
+    \small{\caption{Resultados para el transcrito R3HDML-201: A) Diagrama del transcrito, B) Modelo Random Walk, una iteración, C) Modelo Random Walk, diez iteraciones, D) Matriz de Probabilidades, diez iteraciones, E) Conformación 2D, \textit{ViennaRNA}, F) Conformación 2D, Modelo Random Walk, G) Conformación Aleatoria 2D.}\label{fig:R3HDML-201-diag}}\normalsize
 \end{figure}
 
 % \begin{figure}[H]
