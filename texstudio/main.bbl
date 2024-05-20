@@ -131,6 +131,30 @@
     \field{year}{1980}
   \endentry
 
+  \entry{mccaskill}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MJS}{%
+         family={McCaskill},
+         familyi={M\bibinitperiod},
+         given={John\bibnamedelima S.},
+         giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MJS1}
+    \strng{fullhash}{MJS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb https://doi.org/10.1002/bip.360290621
+    \endverb
+    \field{pages}{1105\bibrangedash 1119}
+    \field{title}{The equilibrium partition function and base pair binding
+  probabilities for RNA secondary structure}
+    \field{volume}{29}
+    \field{journaltitle}{Biopolymers}
+    \field{year}{1990}
+  \endentry
+
   \entry{doyle}{booklet}{}
     \name{author}{2}{}{%
       {{hash=DPG}{%
@@ -275,6 +299,15 @@
     \field{pages}{311\bibrangedash 354}
     \field{title}{Physical Biology of the Cell}
     \field{year}{2013}
+  \endentry
+
+  \entry{lange}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Wikipedia: Langevin Function}
+    \verb{url}
+    \verb https://en.wikipedia.org/wiki/Brillouin_and_Langevin_functions#Langev
+    \verb in_Function
+    \endverb
   \endentry
 
   \entry{pepo}{online}{}

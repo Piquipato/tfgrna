@@ -21,18 +21,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Materiales y Métodos}{8}{section.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Simulación del ARN con el Modelo Freely Jointed Chain}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}Simulación del ARN con el Modelo Freely Jointed Chain}{9}{subsection.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Promedios Modelo Freely Jointed Chain}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Modelo Freely Jointed Chain Promediado}{10}{subsection.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Otros Programas}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.3}Otros Programas}{10}{subsection.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Conformaciones Aleatorias}{9}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.4}Conformaciones Aleatorias}{10}{subsection.3.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Resultados}{10}{section.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Discusión}{12}{section.5}%
+\contentsline {section}{\numberline {5}Discusión}{13}{section.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Bibliografía}{14}{section.6}%
+\contentsline {section}{\numberline {6}Bibliografía}{15}{section.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Apéndice I: Gráficas de los Transcritos}{15}{section.7}%
+\contentsline {section}{\numberline {7}Apéndice I: Gráficas de los Transcritos}{16}{section.7}%
