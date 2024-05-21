@@ -17,6 +17,15 @@
 \endgroup
 
 \datalist[entry]{none/global//global/global}
+  \entry{khan}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Khan Academy: AP Biology}
+    \verb{url}
+    \verb https://es.khanacademy.org/science/ap-biology/gene-expression-and-reg
+    \verb ulation/dna-and-rna-structure/a/nucleic-acids
+    \endverb
+  \endentry
+
   \entry{alberts}{book}{}
     \name{author}{7}{}{%
       {{hash=AB}{%
@@ -98,6 +107,30 @@
     \field{volume}{33}
     \field{journaltitle}{Quarterly Reviews of Biophysics}
     \field{year}{2000}
+  \endentry
+
+  \entry{apbases}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Wikipedia: Apareamiento de Bases}
+    \verb{url}
+    \verb https://es.wikipedia.org/wiki/Apareamiento_de_bases
+    \endverb
+  \endentry
+
+  \entry{rnachem}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Wikipedia: RNA Chemical Structure}
+    \verb{url}
+    \verb https://es.m.wikipedia.org/wiki/Archivo:RNA_chemical_structure.png
+    \endverb
+  \endentry
+
+  \entry{rnawiki}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Wikipedia: Ácido Ribonucléico}
+    \verb{url}
+    \verb https://es.wikipedia.org/wiki/acido_ribonucleico
+    \endverb
   \endentry
 
   \entry{nussinov}{article}{}
@@ -301,7 +334,7 @@
     \field{year}{2013}
   \endentry
 
-  \entry{lange}{online}{}
+  \entry{lange}{misc}{}
     \field{labeltitlesource}{title}
     \field{title}{Wikipedia: Langevin Function}
     \verb{url}

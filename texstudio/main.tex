@@ -24,7 +24,7 @@
 \usepackage{svg, svgcolor}
 \usepackage[backend=bibtex,style=ieee,sorting=none]{biblatex}
 \addbibresource{refs.bib}
-\usepackage{caption}
+\usepackage[font=footnotesize]{caption}
 \usepackage{etoolbox}
 \usepackage{adjustbox}
 \usepackage{parskip}
@@ -97,6 +97,7 @@
 \pagestyle{fancy}
 %\nocite{*}
 \fancyhf{}
+\renewcommand*{\bibfont}{\small}
 \renewcommand{\headrulewidth}{2pt}
 \renewcommand{\footrulewidth}{1pt}
 \fancyhf[LH]{\footnotesize{\emph{Modelado tridimensional del ARN mediante Random Walks}}}
@@ -181,12 +182,34 @@
 %%Incluir aquí la declaración responsable de autoría y uso de las herramientas de IA.
 
 %{\bfseries \large INCLUIR AQUÍ la Declaración Responsable sobre Autoría y Uso Ético de Herramientas de Inteligencia Artificial}
-%\vspace{1cm}
+%
 %
 %El documento se puede descargar en la página web: https://fisicas.ucm.es/tfg-gradoim
 %\vspace{1cm}
 %
 %Y en https://fisicas.ucm.es/file/declaracion-responsable-sobre-autoria-y-uso-etico-de-ia?ver
+\newpage
+\pagenumbering{gobble}
+
+\phantom{hola}
+
+\begin{center}
+    \Large\centering\textbf{Modelado tridimensional del ARN mediante Random Walks}
+\end{center}
+
+\vspace{1cm}
+
+% -- ABSTRACT -- %
+\section*{Resumen}\label{sec:summary}
+
+El estudio de la estructura secundaria del ARN ofrece la posibilidad de una mejor comprensión sobre los procesos biológicos de transcripción y traducción. La capacidad de predecir estructuras en base a una secuencia dada abriría la puerta a poder diseñar moléculas de ARN a nuestro interés, ya sea para modificar el comportamiento del genoma de un ser vivo, como para que cumpla una función catalítica en alguna reacción de interés. Con este objetivo, existen una serie de modelos de predicción estructural del ARN, con especial énfasis en la estructura secundaria de esta molécula. La gran mayoría de modelos tratan de predecir la estructura de ARN de menor energía libre, suponiendo que será la más probable en el equilibrio. En este trabajo, se estudia el modelo Random Walk como una alternativa conceptualmente más sencilla, aunque en la práctica muy ineficiente. Tras comparar con el modelo \textit{ViennaRNA} y con el modelo \textit{SeqFold}, se ha determinado que las cadenas calculadas por Random Walks suelen no ser las más estables, y por lo tanto no se ajustan a la realidad. Se plantea como una opción posible para un estudio posterior cambiar la distribución con la que se eligen las direcciones de los segmentos, para así tener en cuenta como contribuye un segmento a la energía de conformación.
+
+\vspace{1cm}
+
+\section*{Abstract}\label{sec:abstract}
+
+The study of RNA secondary structure offers the possibility to come to a better understanding of the biological processes of transcription and translation. The ability to predict structures based on a given sequence would open the door to being able to design RNA molecules, either to modify the behaviour of the genome of a living being or to perform a catalytic function in a given reaction. To this end, there are a number of RNA structural prediction models, which focus on predicting the secondary structure of this molecule. The vast majority of models try to predict the RNA structure with minimizing the chain free energy, assuming that it will be the most likely state at equilibrium. In this paper, the Random Walk model is studied as a conceptually simpler, but in practice very inefficient, alternative. After comparison with the \textit{ViennaRNA} model and the \textit{SeqFold} model, it has been determined that the chains calculated by Random Walks are often not the most stable, and therefore do not fit to the biological description. A possible option for further study is to change the distribution with which the segment directions are chosen, in order to take into account how a segment contributes to the conformational energy.
+
 \newpage
 
 \includepdf[pages=-]{declaracion.pdf}
@@ -203,17 +226,14 @@
 \Large\centering\textbf{Modelado tridimensional del ARN mediante Random Walks}
 \end{center}
 
-% -- ABSTRACT -- %
-\section{Abstract}\label{sec:summary}
 
-El estudio de la estructura secundaria del ARN ofrece la posibilidad de una mejor comprensión sobre los procesos biológicos de transcripción y traducción. La capacidad de predecir estructuras en base a una secuencia dada abriría la puerta a poder diseñar moléculas de ARN a nuestro interés, ya sea para modificar el comportamiento del genoma de un ser vivo, como para que cumpla una función catalítica en alguna reacción de interés. Con este objetivo, existen una serie de modelos de predicción estructural del ARN, con especial énfasis en la estructura secundaria de esta molécula. La gran mayoría de modelos tratan de predecir la estructura de ARN de menor energía libre, suponiendo que será la más probable en el equilibrio. En este trabajo, se estudia el modelo Random Walk como una alternativa conceptualmente más sencilla, aunque en la práctica muy ineficiente. Tras comparar con el modelo ViennaRNA y con el modelo SeqFold, se ha determinado que las cadenas calculadas por Random Walks suelen no ser las más estables, y por lo tanto no se ajustan a la realidad. Se plantea como una opción posible para un estudio posterior cambiar la distribución con la que se eligen las direcciones de los segmentos, para así tener en cuenta como contribuye un segmento a la energía de conformación.
 
 % -- INTRODUCCIÓN -- %
 %\section{Introducción}\label{sec:intro}
 
 %\newpage
 % -- TEORÍA -- %
-\section{Fundamento Teórico}\label{sec:thry}
+\section{Introducción}\label{sec:thry}
 
 \subsection{Polímeros en las Células}\label{subsec:polymers}
 
@@ -221,7 +241,7 @@ El estudio de la estructura secundaria del ARN ofrece la posibilidad de una mejo
     \begin{center}
       \includegraphics[width=0.35\textwidth]{images/adn.png}
     \end{center}
-    \small{\caption{Cadena de ADN.}\label{fig:adnchain}}\normalsize
+    \small{\caption{Cadena de ADN, \href{https://es.khanacademy.org/science/ap-biology/gene-expression-and-regulation/dna-and-rna-structure/a/nucleic-acids}{Khan Academy} \cite{khan}.}\label{fig:adnchain}}\normalsize
 \end{wrapfigure}
 
 Según el dogma central de la biología molecular, la información genética dentro de cualquier célula se transmite del ADN al ARN, por medio de la transcripción, y de este último se traduce a proteína, que es la molécula que en última instancia la célula usa para realizar una acción dada \cite{alberts}.
@@ -247,7 +267,7 @@ El ARN esta compuesto por cuatro ácidos nucleicos (adenina, citosina, guanina, 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/RNA_base_pairs.png}
-    \small{\caption{Pares de bases complementarias del ARN, \href{https://es.wikipedia.org/wiki/Apareamiento_de_bases}{Wikipedia}.}\label{fig:RNA_base_pairs}}\normalsize
+    \small{\caption{Pares de bases complementarias del ARN, \href{https://es.wikipedia.org/wiki/Apareamiento_de_bases}{Wikipedia} \cite{apbases}.}\label{fig:RNA_base_pairs}}\normalsize
 \end{figure}
 
 
@@ -255,7 +275,7 @@ El ARN esta compuesto por cuatro ácidos nucleicos (adenina, citosina, guanina, 
     \begin{center}
       \includegraphics[width=0.18\textwidth]{images/RNA_chemical_structure.png}
     \end{center}
-    \small{\caption{Estructura química del ARN.}\label{fig:arnchain}}\normalsize
+    \small{\caption{Estructura química del ARN, \href{https://es.m.wikipedia.org/wiki/Archivo:RNA_chemical_structure.png}{Wikipedia} \cite{rnachem}.}\label{fig:arnchain}}\normalsize
 \end{wrapfigure}
 
 Tanto para la cadena de ADN como para la de ARN se pueden definir direcciones en función de los átomos a los que se enlazan las ribosas y las desoxiribosas, también conocidas como pentosas. Se denomina al extremo de la cadena en la que el tercer carbono de las pentosas queda sin enlazar extremo 3' de la cadena. Por analogía, al extremo contrario, en el que el quinto carbono de las pentosas queda sin enlazar se le denomina extremo 5'.
@@ -271,7 +291,7 @@ En lo que a la estructura tridimensional que el ARN presenta, se puede estudiar 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.70\textwidth]{images/RNA_secondary_structure.png}
-    \small{\caption{Motivos de la estructura secundaria del ARN.}\label{fig:RNA_secondary_structure}}\normalsize
+    \small{\caption{Motivos de la estructura secundaria del ARN, \href{https://es.wikipedia.org/wiki/acido_ribonucleico}{Wikipedia} \cite{rnawiki}.}\label{fig:RNA_secondary_structure}}\normalsize
 \end{figure}
 
 El principal objetivo de cualquier modelo computacional dedicado a predecir la estructura tridimensional del ARN es predecir correctamente su estructura secundaria, bajo la suposición de que la estructura terciaria se forma tras la conformación de la estructura secundaria, por ser interacciones con menos probabilidad de ocurrir y menos estables. A continuación expongo los diferentes modelos computacionales que existen para predecir dicha estructura.
@@ -414,9 +434,19 @@ Si combinamos la \er[ecuación]{eq:freerndw} con la \er[ecuación]{eq:extension}
 
 donde la \er[expresión]{eq:invlange} es una aproximación de la función inversa de la función de Langevin, $\mathcal{L}(x)$ \cite{lange}.
 
+\section{Objetivos}\label{sec:objs}
+
+Partiendo de la idea de predecir la estructura secundaria del ARN a partir de la secuencia de la misma, i.e., su estructura primaria, se pretende alcanzar en este trabajo los objetivos enumerados a continuación:
+
+\begin{itemize}
+    \item En primer lugar, se pretende comprobar si el modelo Random Walk es capaz de predecir estructuras tridimensionales del ARN que se ajusten a la descripción biológica, así como comprobar si las estructuras predichas por dicho modelo son biológicamente estables.
+    \item También se pretende comparar el modelo Random Walk con modelos de predicción de estructura secundaria del ARN ya validados, como puede lo son \textit{ViennaRNA} y \textit{SeqFold}.
+    \item Por último, se pretende comprobar si promediando varias conformaciones aleatorias del modelo Random Walk se pueden predecir estructuras más estables de una cadena de ARN dada.
+\end{itemize}
+
 
 % -- MAT&METH -- %
-\section{Materiales y Métodos}\label{sec:mym}
+\section{Metodología}\label{sec:mym}
 
 Para comparar los diferentes modelos que he expuesto en la \nr[sección]{sec:thry}, haré uso de programas escritos en Python, subidos al \href{https://github.com/Piquipato/tfgrna/tree/master/RNAsim}{repositorio Piquipato/tfgrna en GitHub} \cite{pepo}. A continuación se explican los programas.
 
@@ -481,6 +511,7 @@ Para comparar, calcularé el porcentaje de nucleotidos enlazados, que recordemos
 Para contrastar tanto los modelos ya validados que voy a usar como los modelos Random Walk, calcularé también conformaciones aleatorias de la cadena, siguiendo las reglas de la \nr[sección]{subsubsec:thbasis}. Para ello, montaré una matriz de enlaces posibles $q_{ij}$, asignando $q_{ij} = 1$ si el par $i-j$ cumple las normas y es complementario, y $q_{ij} = 0$ si no lo hace. 
 
 De manera aleatoria tomaré elementos de la matriz, teniendo en cuenta que no se deben obtener pseudonudos, y calcularé una conformación aleatoria de la cadena dada, a modo de control.
+
 
 % -- RESULTADOS -- %
 \section{Resultados}\label{sec:res}
@@ -573,8 +604,9 @@ Para los modelos para los que se ha calculado la energía libre de la cadena, qu
 
 A partir de la tabla podemos observar que el modelo promediado de diez conformaciones es el que aporta resultados menos estables. Esto puede deberse a un bajo número de iteraciones, pero aún así, exceptuando el transcrito R3HDML-201, en los demás transcritos la bajada del número de nucleotidos enlazados entre una simulación y diez simulaciones es de alrededor del $90\%$. 
 
+
 % -- CONCLUSIÓN -- %
-\section{Discusión}\label{sec:cnc}
+\section{Conclusión}\label{sec:cnc}
 
 En base a estos resultados, ¿qué se puede concluir sobre el modelo Random Walk para calcular conformaciones de cadenas de ARN? Si bien es verdad que es un modelo bastante simple, lo cual facilita su uso y aplicación, no se ajusta adecuadamente a lo que ya conocemos sobre las estructuras del ARN.
 
@@ -613,7 +645,6 @@ En este trabajo, se ha recurrido a modelos ya validados en trabajos anteriores c
 Estas preguntas abren la puerta a diferentes vías de investigación en la materia de la estructura del ARN y su función biológica. Sin embargo, la complejidad de las mismas hacen que no sea posible abarcarlas en el trabajo aquí realizado, y por ello se proponen como posiblidad a futuro.
 
 
-\newpage
 % -- REFERENCIAS -- %
 \newpage
 \printbibliography[title=Bibliografía, heading=bibnumbered]\label{sec:refs}
@@ -627,7 +658,7 @@ Estas preguntas abren la puerta a diferentes vías de investigación en la mater
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{images/CEROX1-210_full.png}
+    \includegraphics[width=\textwidth]{images/CEROX1-210_full_old.png}
     \small{\caption{Resultados para el transcrito CEROX1-210: A) Diagrama del transcrito, B) Modelo Random Walk, una iteración, C) Modelo Random Walk, diez iteraciones, D) Matriz de Probabilidades, diez iteraciones, E) Conformación 2D, \textit{ViennaRNA}, F) Conformación 2D, Modelo Random Walk, G) Conformación Aleatoria 2D.}\label{fig:CEROX1-210-diag}}\normalsize
 \end{figure}
 
@@ -694,7 +725,7 @@ Estas preguntas abren la puerta a diferentes vías de investigación en la mater
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{images/PCDH15-221_full.png}
+    \includegraphics[width=\textwidth]{images/PCDH15-221_full_old.png}
     \small{\caption{Resultados para el transcrito PCDH15-221: A) Diagrama del transcrito, B) Modelo Random Walk, una iteración, C) Modelo Random Walk, diez iteraciones, D) Matriz de Probabilidades, diez iteraciones, E) Conformación 2D, \textit{ViennaRNA}, F) Conformación 2D, \textit{SeqFold}, G) Conformación 2D, Modelo Random Walk, H) Conformación Aleatoria 2D.}\label{fig:PCDH15-221-diag}}\normalsize
 \end{figure}
 
@@ -766,7 +797,7 @@ Estas preguntas abren la puerta a diferentes vías de investigación en la mater
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{images/VPS53-218_full.png}
+    \includegraphics[width=\textwidth]{images/VPS53-218_full_old.png}
     \small{\caption{Resultados para el transcrito VPS53-218: A) Diagrama del transcrito, B) Modelo Random Walk, una iteración, C) Modelo Random Walk, diez iteraciones, D) Matriz de Probabilidades, diez iteraciones, E) Conformación 2D, \textit{ViennaRNA}, F) Conformación 2D, Modelo Random Walk, G) Conformación Aleatoria 2D.}\label{fig:VPS53-218-diag}}\normalsize
 \end{figure}
 
@@ -831,7 +862,7 @@ Estas preguntas abren la puerta a diferentes vías de investigación en la mater
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{images/MACROH2A1-208_full.png}
+    \includegraphics[width=\textwidth]{images/MACROH2A1-208_full_old.png}
     \small{\caption{Resultados para el transcrito MACROH2A1-208: A) Diagrama del transcrito, B) Modelo Random Walk, una iteración, C) Modelo Random Walk, diez iteraciones, D) Matriz de Probabilidades, diez iteraciones, E) Conformación 2D, \textit{ViennaRNA}, F) Conformación 2D, \textit{SeqFold}, G) Conformación 2D, Modelo Random Walk, H) Conformación Aleatoria 2D.}\label{fig:MACROH2A1-208-diag}}\normalsize
 \end{figure}
 
@@ -903,7 +934,7 @@ Estas preguntas abren la puerta a diferentes vías de investigación en la mater
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{images/R3HDML-201_full.png}
+    \includegraphics[width=\textwidth]{images/R3HDML-201_full_old.png}
     \small{\caption{Resultados para el transcrito R3HDML-201: A) Diagrama del transcrito, B) Modelo Random Walk, una iteración, C) Modelo Random Walk, diez iteraciones, D) Matriz de Probabilidades, diez iteraciones, E) Conformación 2D, \textit{ViennaRNA}, F) Conformación 2D, Modelo Random Walk, G) Conformación Aleatoria 2D.}\label{fig:R3HDML-201-diag}}\normalsize
 \end{figure}
 
