@@ -92,7 +92,6 @@ def get_avg_conf(seq, **kws):
 
 def maintwo(seq, trans, path='.'):
     f = open(path + '/dot_bracket.txt', 'a')
-    """
     print('[INFO][{time}]:  Calculating get_avg_conf(trans={transcript}, iter=10)'.format(
         time=datetime.now().strftime("%H:%M:%S"),
         transcript=trans
@@ -138,10 +137,10 @@ def maintwo(seq, trans, path='.'):
     f.write(db_sqf + '\t' + f'{trans}-' + str('db_sqf') + '\t' + \
                     str(len([it for it in db_sqf if it != '.'])) + \
                     '\t' + str(len(db_sqf)) + '\n')
-    RNA.svg_rna_plot(seq, db_sqf, path + f'/{trans}-db_sqf.svg')
+    RNA.svg_rna_plot(seq, db_sqf, path + f'/{trans}-db_sqf.svg')#'db_sqf': db_sqf, 
     """
-    mydict = {'db_vrna': db_vrna, 'db_sqf': db_sqf, \
-              'db_iter': db_iter, 'db_avg': db_avg, 'db_one': db_one}
+    mydict = {'db_vrna': db_vrna, 'db_iter': db_iter, \
+              'db_avg': db_avg, 'db_one': db_one}
     svg = ['db_vrna', 'db_sqf']
     with open(path + '/dot_bracket.txt', 'a') as f:
         for key, i in mydict.items():
@@ -150,7 +149,7 @@ def maintwo(seq, trans, path='.'):
                     '\t' + str(len(i)) + '\n')
             if key in svg:
                 RNA.svg_rna_plot(seq, i, path + f'/{trans}-{key}.svg')
-    """
+    
     f.close()
 
 def get_sequence(transcript):
